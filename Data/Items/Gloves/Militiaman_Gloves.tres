@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Data/Entities/EntityItem.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Sprites/Gloves/Militiaman.png" type="Resource" id=2]
+
+[resource]
+script = ExtResource( 1 )
+category_type = 4
+name = "Militiaman"
+identifier = "1ae8ca7b88eec04f3cf05736e300f889"
+texture_icon = ExtResource( 2 )
+attack_power = 0
+defense_value = 11
+price = 649
+special_trait = "Rand 298"
+effect = ""
+description = "Random description 869"

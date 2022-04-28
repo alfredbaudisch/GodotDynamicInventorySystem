@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Data/Entities/EntityItem.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Sprites/Arrows/BattleBow.png" type="Resource" id=2]
+
+[resource]
+script = ExtResource( 1 )
+category_type = 1
+name = "Battle Bow"
+identifier = "e58f6703ece8150317a3466679b10081"
+texture_icon = ExtResource( 2 )
+attack_power = 18
+defense_value = 0
+price = 472
+special_trait = "Rand 694"
+effect = "Rand 147"
+description = "Random description 63"

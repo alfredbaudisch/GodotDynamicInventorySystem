@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Data/Entities/EntityItem.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Sprites/Boots/BanditArmor.png" type="Resource" id=2]
+
+[resource]
+script = ExtResource( 1 )
+category_type = 2
+name = "Bandit Armor"
+identifier = "54b626d2e0fce899a85d0e1553158ebe"
+texture_icon = ExtResource( 2 )
+attack_power = 0
+defense_value = 22
+price = 486
+special_trait = ""
+effect = "Rand 215"
+description = "Random description 589"

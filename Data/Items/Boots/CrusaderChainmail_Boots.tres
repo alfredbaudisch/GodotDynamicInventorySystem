@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Data/Entities/EntityItem.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Sprites/Boots/CrusaderChainmail.png" type="Resource" id=2]
+
+[resource]
+script = ExtResource( 1 )
+category_type = 2
+name = "Crusader Chainmail"
+identifier = "b4e9742e24626a47369e30e2b418df53"
+texture_icon = ExtResource( 2 )
+attack_power = 0
+defense_value = 14
+price = 56
+special_trait = ""
+effect = ""
+description = "Random description 364"

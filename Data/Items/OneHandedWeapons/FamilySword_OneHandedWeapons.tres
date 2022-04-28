@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Data/Entities/EntityItem.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Sprites/OneHandedWeapons/FamilySword.png" type="Resource" id=2]
+
+[resource]
+script = ExtResource( 1 )
+category_type = 7
+name = "Family Sword"
+identifier = "d25aed35dcea80fce376ccab71f204ba"
+texture_icon = ExtResource( 2 )
+attack_power = 44
+defense_value = 0
+price = 716
+special_trait = "Rand 333"
+effect = "Rand 463"
+description = "Random description 176"

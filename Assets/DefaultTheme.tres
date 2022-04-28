@@ -1,0 +1,45 @@
+[gd_resource type="Theme" load_steps=13 format=2]
+
+[ext_resource path="res://Assets/Fonts/DynamicFontRobotoBoldItalic.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Assets/Fonts/DynamicFontRobotoRegular.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Assets/Styles/ButtonStyleFlatHover.tres" type="StyleBox" id=3]
+[ext_resource path="res://Assets/Styles/ButtonStyleFlat.tres" type="StyleBox" id=4]
+[ext_resource path="res://Assets/Styles/ButtonStyleFlatPressed.tres" type="StyleBox" id=5]
+[ext_resource path="res://Assets/Styles/ButtonStyleFlatFocused.tres" type="StyleBox" id=6]
+[ext_resource path="res://Assets/Fonts/DynamicFontRobotoBold.tres" type="DynamicFont" id=7]
+[ext_resource path="res://Assets/Fonts/DynamicFontRobotoItalic.tres" type="DynamicFont" id=8]
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0, 0, 0, 0.670588 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 1, 1, 1, 0.443137 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.694118, 0.25098, 0.25098, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.8, 0.8, 0.8, 0 )
+
+[resource]
+Button/fonts/font = ExtResource( 1 )
+Button/styles/focus = ExtResource( 6 )
+Button/styles/hover = ExtResource( 3 )
+Button/styles/normal = ExtResource( 4 )
+Button/styles/pressed = ExtResource( 5 )
+HScrollBar/styles/grabber = SubResource( 2 )
+HScrollBar/styles/scroll = SubResource( 3 )
+Label/fonts/font = ExtResource( 2 )
+ProgressBar/styles/bg = SubResource( 4 )
+ProgressBar/styles/fg = SubResource( 5 )
+RichTextLabel/fonts/bold_font = ExtResource( 7 )
+RichTextLabel/fonts/italics_font = ExtResource( 8 )
+RichTextLabel/fonts/normal_font = ExtResource( 2 )

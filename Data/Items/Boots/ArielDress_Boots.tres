@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Data/Entities/EntityItem.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Sprites/Boots/ArielDress.png" type="Resource" id=2]
+
+[resource]
+script = ExtResource( 1 )
+category_type = 2
+name = "Ariel Dress"
+identifier = "190f3b1fce3f7c1a2c6882ec51fd6c8e"
+texture_icon = ExtResource( 2 )
+attack_power = 0
+defense_value = 5
+price = 885
+special_trait = "Rand 679"
+effect = ""
+description = "Random description 573"

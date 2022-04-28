@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Data/Entities/EntityItem.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Sprites/Helmets/LeatherCap.png" type="Resource" id=2]
+
+[resource]
+script = ExtResource( 1 )
+category_type = 5
+name = "Leather Cap"
+identifier = "55288e20e14c2da452fe9cee9b42caf2"
+texture_icon = ExtResource( 2 )
+attack_power = 0
+defense_value = 18
+price = 689
+special_trait = "Rand 189"
+effect = "Rand 842"
+description = "Random description 458"

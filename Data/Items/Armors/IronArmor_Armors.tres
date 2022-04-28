@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Data/Entities/EntityItem.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Sprites/Armors/IronArmor.png" type="Resource" id=2]
+
+[resource]
+script = ExtResource( 1 )
+category_type = 0
+name = "Iron Armor"
+identifier = "0df9e00ccf872346b2637415f5b36103"
+texture_icon = ExtResource( 2 )
+attack_power = 0
+defense_value = 6
+price = 990
+special_trait = ""
+effect = "Rand 384"
+description = "Random description 210"

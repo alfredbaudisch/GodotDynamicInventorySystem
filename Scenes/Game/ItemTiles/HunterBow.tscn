@@ -1,0 +1,15 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Data/Items/Bows/HunterBow_Bows.tres" type="Resource" id=1]
+[ext_resource path="res://Scenes/Game/CollectableItemTile.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/Tiles/colored_tilemap_packed.png" type="Texture" id=3]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 3 )
+region = Rect2( 64, 32, 8, 8 )
+
+[node name="HunterBow" instance=ExtResource( 2 )]
+item = ExtResource( 1 )
+
+[node name="Sprite" parent="." index="0"]
+texture = SubResource( 1 )

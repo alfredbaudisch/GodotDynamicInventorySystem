@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Data/Entities/EntityItem.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Sprites/Helmets/MilitiamanHelmet2.png" type="Resource" id=2]
+
+[resource]
+script = ExtResource( 1 )
+category_type = 5
+name = "Militiaman Helmet"
+identifier = "2e79c0ff2584f8fe9c8325e0d9065ccc"
+texture_icon = ExtResource( 2 )
+attack_power = 0
+defense_value = 15
+price = 601
+special_trait = ""
+effect = "Rand 274"
+description = "Random description 902"

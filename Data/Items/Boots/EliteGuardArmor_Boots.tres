@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Data/Entities/EntityItem.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Sprites/Boots/EliteGuardArmor.png" type="Resource" id=2]
+
+[resource]
+script = ExtResource( 1 )
+category_type = 2
+name = "Elite Guard Armor"
+identifier = "551cd7108e8d9095141f34c36a2d7c53"
+texture_icon = ExtResource( 2 )
+attack_power = 0
+defense_value = 15
+price = 555
+special_trait = "Rand 699"
+effect = ""
+description = "Random description 483"

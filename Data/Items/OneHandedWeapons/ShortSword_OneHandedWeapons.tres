@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Data/Entities/EntityItem.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Sprites/OneHandedWeapons/ShortSword.png" type="Resource" id=2]
+
+[resource]
+script = ExtResource( 1 )
+category_type = 7
+name = "Short Sword"
+identifier = "6f3c3a133e42c9c712e3bd3df00d541c"
+texture_icon = ExtResource( 2 )
+attack_power = 32
+defense_value = 0
+price = 860
+special_trait = ""
+effect = ""
+description = "Random description 560"

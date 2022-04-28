@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Data/Entities/EntityItem.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Sprites/Armors/FalconLightArmor.png" type="Resource" id=2]
+
+[resource]
+script = ExtResource( 1 )
+category_type = 0
+name = "Falcon Light Armor"
+identifier = "eb2df89cd8966b86f833a2cd2bd40b23"
+texture_icon = ExtResource( 2 )
+attack_power = 0
+defense_value = 11
+price = 547
+special_trait = ""
+effect = "Rand 26"
+description = "Random description 817"

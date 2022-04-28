@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Data/Entities/EntityItem.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Sprites/Boots/LeatherJacket.png" type="Resource" id=2]
+
+[resource]
+script = ExtResource( 1 )
+category_type = 2
+name = "Leather Jacket"
+identifier = "340a1dea03e21ba173d44e2e1d657fc5"
+texture_icon = ExtResource( 2 )
+attack_power = 0
+defense_value = 19
+price = 227
+special_trait = "Rand 338"
+effect = ""
+description = "Random description 532"

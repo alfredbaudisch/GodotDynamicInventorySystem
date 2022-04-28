@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Data/Entities/EntityItem.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Sprites/Boots/Robe.png" type="Resource" id=2]
+
+[resource]
+script = ExtResource( 1 )
+category_type = 2
+name = "Robe"
+identifier = "a6136251890ddee67e17eb9371b4e3b7"
+texture_icon = ExtResource( 2 )
+attack_power = 0
+defense_value = 10
+price = 827
+special_trait = "Rand 792"
+effect = ""
+description = "Random description 578"

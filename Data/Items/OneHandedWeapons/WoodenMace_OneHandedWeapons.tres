@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Data/Entities/EntityItem.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Sprites/OneHandedWeapons/WoodenMace.png" type="Resource" id=2]
+
+[resource]
+script = ExtResource( 1 )
+category_type = 7
+name = "Wooden Mace"
+identifier = "50d3a717adc125d9fdfb8bb2be4b118d"
+texture_icon = ExtResource( 2 )
+attack_power = 41
+defense_value = 0
+price = 516
+special_trait = "Rand 659"
+effect = ""
+description = "Random description 862"

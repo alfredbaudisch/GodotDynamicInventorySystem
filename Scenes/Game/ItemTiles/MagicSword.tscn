@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Data/Items/OneHandedWeapons/MagicSword_OneHandedWeapons.tres" type="Resource" id=1]
+[ext_resource path="res://Scenes/Game/CollectableItemTile.tscn" type="PackedScene" id=2]
+
+[node name="MagicSword" instance=ExtResource( 2 )]
+item = ExtResource( 1 )

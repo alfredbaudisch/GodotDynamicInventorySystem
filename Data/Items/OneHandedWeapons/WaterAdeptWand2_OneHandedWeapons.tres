@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Data/Entities/EntityItem.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Sprites/OneHandedWeapons/WaterAdeptWand2.png" type="Resource" id=2]
+
+[resource]
+script = ExtResource( 1 )
+category_type = 7
+name = "Water Adept Wand"
+identifier = "4ddc4d5a0214a1640207244f3a202e8c"
+texture_icon = ExtResource( 2 )
+attack_power = 38
+defense_value = 0
+price = 545
+special_trait = ""
+effect = "Rand 732"
+description = "Random description 229"

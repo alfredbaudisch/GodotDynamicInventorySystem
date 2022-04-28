@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Data/Entities/EntityItem.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Sprites/Gloves/Cleric.png" type="Resource" id=2]
+
+[resource]
+script = ExtResource( 1 )
+category_type = 4
+name = "Cleric"
+identifier = "8ba7619726a2fab34cdfaffdc869678c"
+texture_icon = ExtResource( 2 )
+attack_power = 0
+defense_value = 25
+price = 77
+special_trait = "Rand 98"
+effect = "Rand 234"
+description = "Random description 195"

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Data/Entities/EntityItem.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Sprites/Shields/HermitLamp.png" type="Resource" id=2]
+
+[resource]
+script = ExtResource( 1 )
+category_type = 6
+name = "Hermit Lamp"
+identifier = "f078f3ee429cbd4aa12c25227648977f"
+texture_icon = ExtResource( 2 )
+attack_power = 0
+defense_value = 86
+price = 69
+special_trait = ""
+effect = "Rand 8"
+description = "Random description 962"

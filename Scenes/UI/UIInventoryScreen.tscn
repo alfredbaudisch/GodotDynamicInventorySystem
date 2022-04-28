@@ -1,0 +1,194 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Scenes/UI/UIInventory.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/UI/ButtonBackgrounds/white.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Shaders/ShaderCanvasItemBlur.gdshader" type="Shader" id=3]
+[ext_resource path="res://Assets/Fonts/DynamicFontDataRobotoCondensedBoldItalic.tres" type="DynamicFontData" id=4]
+[ext_resource path="res://Assets/DefaultTheme.tres" type="Theme" id=5]
+[ext_resource path="res://Assets/Fonts/DynamicFontDataRobotoCondensedRegular.tres" type="DynamicFontData" id=6]
+[ext_resource path="res://Assets/UI/Icons/pouch.png" type="Texture" id=7]
+[ext_resource path="res://Assets/UI/Prompts/Tab_Key_Light.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Fonts/DynamicFontRobotoBoldItalic.tres" type="DynamicFont" id=9]
+[ext_resource path="res://Scenes/UI/Elements/UICharacterStats.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scripts/UI/UICharacterGold.gd" type="Script" id=11]
+
+[sub_resource type="ShaderMaterial" id=3]
+shader = ExtResource( 3 )
+shader_param/blur_amount = 3.6
+
+[sub_resource type="DynamicFont" id=4]
+size = 40
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 24
+font_data = ExtResource( 6 )
+
+[node name="UIInventoryScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 1280, 720 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureBlur" type="TextureRect" parent="."]
+material = SubResource( 3 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -200.0
+margin_top = -160.0
+margin_right = 200.0
+margin_bottom = 160.0
+rect_min_size = Vector2( 1680, 1040 )
+size_flags_horizontal = 2
+size_flags_vertical = 2
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 1280, 720 )
+custom_constants/separation = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ControlHeader" type="Control" parent="VBoxContainer"]
+margin_right = 1280.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 0, 100 )
+theme = ExtResource( 5 )
+
+[node name="ColorRectBackground" type="ColorRect" parent="VBoxContainer/ControlHeader"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.686275, 0.686275, 0.686275, 0.164706 )
+
+[node name="LabelTitle" type="Label" parent="VBoxContainer/ControlHeader"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -74.5
+margin_top = -24.0
+margin_right = 74.5
+margin_bottom = 24.0
+custom_fonts/font = SubResource( 4 )
+text = "Inventory"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRectSeparator" type="ColorRect" parent="VBoxContainer/ControlHeader"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 0, 1 )
+color = Color( 0.478431, 0.478431, 0.478431, 0.462745 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxGold" type="HBoxContainer" parent="VBoxContainer/ControlHeader"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -150.0
+margin_top = -32.0
+margin_bottom = 32.0
+custom_constants/separation = 10
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/ControlHeader/HBoxGold"]
+margin_right = 32.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 32, 32 )
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 6
+
+[node name="LabelGold" type="Label" parent="VBoxContainer/ControlHeader/HBoxGold"]
+margin_left = 42.0
+margin_top = 17.0
+margin_right = 90.0
+margin_bottom = 46.0
+custom_fonts/font = SubResource( 5 )
+text = "4456"
+
+[node name="UICharacterStats" parent="VBoxContainer/ControlHeader" instance=ExtResource( 10 )]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 60.0
+margin_top = -16.0
+margin_right = 300.0
+margin_bottom = 16.0
+
+[node name="UIInventory" parent="VBoxContainer" instance=ExtResource( 1 )]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 0.0
+margin_top = 100.0
+margin_right = 1280.0
+margin_bottom = 660.0
+
+[node name="ControlFooter" type="Control" parent="VBoxContainer"]
+margin_top = 660.0
+margin_right = 1280.0
+margin_bottom = 720.0
+rect_min_size = Vector2( 0, 60 )
+theme = ExtResource( 5 )
+
+[node name="ColorRectBackground" type="ColorRect" parent="VBoxContainer/ControlFooter"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.686275, 0.686275, 0.686275, 0.164706 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRectSeparator" type="ColorRect" parent="VBoxContainer/ControlFooter"]
+anchor_right = 1.0
+rect_min_size = Vector2( 0, 1 )
+color = Color( 0.478431, 0.478431, 0.478431, 0.462745 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxPrompts" type="HBoxContainer" parent="VBoxContainer/ControlFooter"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -160.0
+margin_top = -20.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 0, 40 )
+
+[node name="TexturePromptClose" type="TextureButton" parent="VBoxContainer/ControlFooter/HBoxPrompts"]
+margin_right = 40.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 40, 40 )
+texture_normal = ExtResource( 8 )
+expand = true
+stretch_mode = 5
+
+[node name="LabelClose" type="Label" parent="VBoxContainer/ControlFooter/HBoxPrompts"]
+margin_left = 44.0
+margin_top = 10.0
+margin_right = 80.0
+margin_bottom = 29.0
+custom_fonts/font = ExtResource( 9 )
+text = "Close"
+
+[connection signal="draw" from="VBoxContainer/ControlHeader/HBoxGold" to="VBoxContainer/ControlHeader/HBoxGold" method="_on_HBoxGold_draw"]

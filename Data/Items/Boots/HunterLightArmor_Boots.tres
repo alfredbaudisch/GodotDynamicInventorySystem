@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Data/Entities/EntityItem.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Sprites/Boots/HunterLightArmor.png" type="Resource" id=2]
+
+[resource]
+script = ExtResource( 1 )
+category_type = 2
+name = "Hunter Light Armor"
+identifier = "8a838984fc4d619f6078f911135f0444"
+texture_icon = ExtResource( 2 )
+attack_power = 0
+defense_value = 6
+price = 121
+special_trait = "Rand 913"
+effect = ""
+description = "Random description 271"

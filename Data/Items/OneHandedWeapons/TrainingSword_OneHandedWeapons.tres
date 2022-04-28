@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Data/Entities/EntityItem.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Sprites/OneHandedWeapons/TrainingSword.png" type="Resource" id=2]
+
+[resource]
+script = ExtResource( 1 )
+category_type = 7
+name = "Training Sword"
+identifier = "aba93badc15f8a03deed9c563f8db218"
+texture_icon = ExtResource( 2 )
+attack_power = 20
+defense_value = 0
+price = 736
+special_trait = ""
+effect = "Rand 20"
+description = "Random description 873"

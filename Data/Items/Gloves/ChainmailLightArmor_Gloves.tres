@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Data/Entities/EntityItem.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Sprites/Gloves/ChainmailLightArmor.png" type="Resource" id=2]
+
+[resource]
+script = ExtResource( 1 )
+category_type = 4
+name = "Chainmail Light Armor"
+identifier = "c51e2415334450c26dec5be6cfe098b4"
+texture_icon = ExtResource( 2 )
+attack_power = 0
+defense_value = 22
+price = 336
+special_trait = "Rand 956"
+effect = ""
+description = "Random description 536"

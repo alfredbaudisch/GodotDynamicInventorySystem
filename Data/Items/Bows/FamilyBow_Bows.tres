@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Data/Entities/EntityItem.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Sprites/Bows/FamilyBow.png" type="Resource" id=2]
+
+[resource]
+script = ExtResource( 1 )
+category_type = 3
+name = "Family Bow"
+identifier = "babf15c4f9788f8208e1b2d723bf4378"
+texture_icon = ExtResource( 2 )
+attack_power = 49
+defense_value = 0
+price = 578
+special_trait = ""
+effect = ""
+description = "Random description 314"

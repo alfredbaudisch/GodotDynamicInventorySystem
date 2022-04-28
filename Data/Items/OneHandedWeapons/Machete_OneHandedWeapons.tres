@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Data/Entities/EntityItem.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Sprites/OneHandedWeapons/Machete.png" type="Resource" id=2]
+
+[resource]
+script = ExtResource( 1 )
+category_type = 7
+name = "Machete"
+identifier = "1cf4a50e7650122e28295b35a6a6bd07"
+texture_icon = ExtResource( 2 )
+attack_power = 26
+defense_value = 0
+price = 434
+special_trait = ""
+effect = "Rand 807"
+description = "Random description 844"

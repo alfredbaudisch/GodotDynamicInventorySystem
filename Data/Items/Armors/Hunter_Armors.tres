@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Data/Entities/EntityItem.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Sprites/Armors/Hunter.png" type="Resource" id=2]
+
+[resource]
+script = ExtResource( 1 )
+category_type = 0
+name = "Hunter"
+identifier = "de7a33bb445592aa00aa9eeec5f2c0d7"
+texture_icon = ExtResource( 2 )
+attack_power = 0
+defense_value = 11
+price = 869
+special_trait = "Rand 30"
+effect = ""
+description = "Random description 177"

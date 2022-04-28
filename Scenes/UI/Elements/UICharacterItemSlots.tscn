@@ -1,0 +1,187 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Assets/UI/Icons/ItemCategories/Helmets.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/UI/Elements/UICharacterItemSlot.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/UI/Icons/ItemCategories/Gloves.png" type="Texture" id=3]
+[ext_resource path="res://Assets/UI/Icons/ItemCategories/Armors.png" type="Texture" id=4]
+[ext_resource path="res://Assets/UI/Icons/ItemCategories/Weapons.png" type="Texture" id=5]
+[ext_resource path="res://Assets/UI/Icons/ItemCategories/Shields.png" type="Texture" id=6]
+[ext_resource path="res://Assets/UI/Icons/ItemCategories/Boots.png" type="Texture" id=7]
+[ext_resource path="res://Assets/UI/Icons/ItemCategories/Bows.png" type="Texture" id=8]
+[ext_resource path="res://Scripts/UI/UICharacterItemSlots.gd" type="Script" id=9]
+
+[node name="UICharacterItemSlots" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -1006.0
+margin_bottom = -446.0
+rect_min_size = Vector2( 274, 274 )
+script = ExtResource( 9 )
+
+[node name="SlotHelmet" parent="." instance=ExtResource( 2 )]
+margin_left = 92.0
+margin_right = 182.0
+margin_bottom = 90.0
+item_category_type = [ 5 ]
+
+[node name="TexturePlaceholder" type="TextureRect" parent="SlotHelmet/UIFrame/TextureRect" index="0"]
+modulate = Color( 0.2, 0.2, 0.2, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 6
+
+[node name="TextureEquipped" type="TextureRect" parent="SlotHelmet/UIFrame/TextureRect" index="1"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+expand = true
+stretch_mode = 6
+
+[node name="SlotArmor" parent="." instance=ExtResource( 2 )]
+margin_left = 92.0
+margin_top = 92.0
+margin_right = 182.0
+margin_bottom = 182.0
+item_category_type = [ 0 ]
+
+[node name="TexturePlaceholder" type="TextureRect" parent="SlotArmor/UIFrame/TextureRect" index="0"]
+modulate = Color( 0.2, 0.2, 0.2, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureEquipped" type="TextureRect" parent="SlotArmor/UIFrame/TextureRect" index="1"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+expand = true
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SlotGloves" parent="." instance=ExtResource( 2 )]
+margin_left = 30.0
+margin_top = 30.0
+margin_right = 90.0
+margin_bottom = 90.0
+item_category_type = [ 4 ]
+
+[node name="TexturePlaceholder" type="TextureRect" parent="SlotGloves/UIFrame/TextureRect" index="0"]
+modulate = Color( 0.2, 0.2, 0.2, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 6
+
+[node name="TextureEquipped" type="TextureRect" parent="SlotGloves/UIFrame/TextureRect" index="1"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+expand = true
+stretch_mode = 6
+
+[node name="SlotWeapon" parent="." instance=ExtResource( 2 )]
+margin_top = 92.0
+margin_right = 90.0
+margin_bottom = 182.0
+item_category_type = [ 7, 8, 3 ]
+
+[node name="TexturePlaceholder" type="TextureRect" parent="SlotWeapon/UIFrame/TextureRect" index="0"]
+modulate = Color( 0.2, 0.2, 0.2, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 5 )
+expand = true
+stretch_mode = 6
+
+[node name="TextureEquipped" type="TextureRect" parent="SlotWeapon/UIFrame/TextureRect" index="1"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+expand = true
+stretch_mode = 6
+
+[node name="SlotAmmo" parent="." instance=ExtResource( 2 )]
+margin_left = 184.0
+margin_top = 30.0
+margin_right = 244.0
+margin_bottom = 90.0
+item_category_type = [ 1 ]
+
+[node name="TexturePlaceholder" type="TextureRect" parent="SlotAmmo/UIFrame/TextureRect" index="0"]
+modulate = Color( 0.2, 0.2, 0.2, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 8 )
+expand = true
+stretch_mode = 6
+
+[node name="TextureEquipped" type="TextureRect" parent="SlotAmmo/UIFrame/TextureRect" index="1"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+expand = true
+stretch_mode = 6
+
+[node name="SlotOffHand" parent="." instance=ExtResource( 2 )]
+margin_left = 184.0
+margin_top = 92.0
+margin_right = 274.0
+margin_bottom = 182.0
+item_category_type = [ 6 ]
+
+[node name="TexturePlaceholder" type="TextureRect" parent="SlotOffHand/UIFrame/TextureRect" index="0"]
+modulate = Color( 0.2, 0.2, 0.2, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 6 )
+expand = true
+stretch_mode = 6
+
+[node name="TextureEquipped" type="TextureRect" parent="SlotOffHand/UIFrame/TextureRect" index="1"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+expand = true
+stretch_mode = 6
+
+[node name="SlotBoots" parent="." instance=ExtResource( 2 )]
+margin_left = 92.0
+margin_top = 184.0
+margin_right = 182.0
+margin_bottom = 274.0
+item_category_type = [ 2 ]
+
+[node name="TexturePlaceholder" type="TextureRect" parent="SlotBoots/UIFrame/TextureRect" index="0"]
+modulate = Color( 0.2, 0.2, 0.2, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureEquipped" type="TextureRect" parent="SlotBoots/UIFrame/TextureRect" index="1"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+expand = true
+stretch_mode = 6
+
+[editable path="SlotHelmet"]
+[editable path="SlotArmor"]
+[editable path="SlotGloves"]
+[editable path="SlotWeapon"]
+[editable path="SlotAmmo"]
+[editable path="SlotOffHand"]
+[editable path="SlotBoots"]

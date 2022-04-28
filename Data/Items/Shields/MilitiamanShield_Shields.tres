@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Data/Entities/EntityItem.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Sprites/Shields/MilitiamanShield.png" type="Resource" id=2]
+
+[resource]
+script = ExtResource( 1 )
+category_type = 6
+name = "Militiaman Shield"
+identifier = "2cee1b8d8be8ccb7d35323aa26f894af"
+texture_icon = ExtResource( 2 )
+attack_power = 0
+defense_value = 67
+price = 236
+special_trait = ""
+effect = ""
+description = "Random description 330"

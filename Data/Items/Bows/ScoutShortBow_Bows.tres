@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Data/Entities/EntityItem.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Sprites/Bows/ScoutShortBow.png" type="Resource" id=2]
+
+[resource]
+script = ExtResource( 1 )
+category_type = 3
+name = "Scout Short Bow"
+identifier = "c8e2c57b4b459c652efdc4e65342467d"
+texture_icon = ExtResource( 2 )
+attack_power = 32
+defense_value = 0
+price = 879
+special_trait = "Rand 67"
+effect = ""
+description = "Random description 537"

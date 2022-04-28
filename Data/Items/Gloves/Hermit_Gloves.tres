@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Data/Entities/EntityItem.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Sprites/Gloves/Hermit.png" type="Resource" id=2]
+
+[resource]
+script = ExtResource( 1 )
+category_type = 4
+name = "Hermit"
+identifier = "ca6912ad237d258f2586ad6591738279"
+texture_icon = ExtResource( 2 )
+attack_power = 0
+defense_value = 17
+price = 422
+special_trait = ""
+effect = "Rand 825"
+description = "Random description 337"

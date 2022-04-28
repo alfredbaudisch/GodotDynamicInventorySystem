@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Data/Entities/EntityItem.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Sprites/TwoHandedWeapons/SteelAxe.png" type="Resource" id=2]
+
+[resource]
+script = ExtResource( 1 )
+category_type = 8
+name = "Steel Axe"
+identifier = "73337da86cfdabf0f4ca6167c913f0bf"
+texture_icon = ExtResource( 2 )
+attack_power = 77
+defense_value = 15
+price = 492
+special_trait = "Rand 166"
+effect = "Rand 162"
+description = "Random description 734"

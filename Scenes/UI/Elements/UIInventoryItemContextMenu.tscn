@@ -1,0 +1,47 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Assets/DefaultTheme.tres" type="Theme" id=1]
+[ext_resource path="res://Scenes/UI/Elements/UIFrame.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scripts/UI/UIInventoryItemContextMenu.gd" type="Script" id=3]
+
+[node name="UIInventoryItemContextMenu" type="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -120.0
+margin_top = -60.0
+margin_right = 120.0
+margin_bottom = 60.0
+theme = ExtResource( 1 )
+script = ExtResource( 3 )
+
+[node name="UIFrame" parent="." instance=ExtResource( 2 )]
+
+[node name="VBoxButtons" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -39.0
+margin_right = 100.0
+margin_bottom = 39.0
+custom_constants/separation = 8
+
+[node name="ButtonEquip" type="Button" parent="VBoxButtons"]
+margin_right = 200.0
+margin_bottom = 35.0
+focus_mode = 0
+size_flags_horizontal = 3
+enabled_focus_mode = 0
+text = "Equip"
+
+[node name="ButtonCancel" type="Button" parent="VBoxButtons"]
+margin_top = 43.0
+margin_right = 200.0
+margin_bottom = 78.0
+focus_mode = 0
+size_flags_horizontal = 3
+enabled_focus_mode = 0
+text = "Cancel"

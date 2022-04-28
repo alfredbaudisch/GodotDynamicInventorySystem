@@ -1,0 +1,231 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Scenes/UI/Elements/UIFrame.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/DefaultTheme.tres" type="Theme" id=2]
+[ext_resource path="res://Assets/Fonts/DynamicFontDataRobotoCondensedBoldItalic.tres" type="DynamicFontData" id=3]
+[ext_resource path="res://Assets/UI/Icons/sword.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Fonts/DynamicFontDataRobotoCondensedBold.tres" type="DynamicFontData" id=5]
+[ext_resource path="res://Assets/UI/Icons/shield.png" type="Texture" id=6]
+[ext_resource path="res://Assets/UI/Icons/dollar.png" type="Texture" id=7]
+[ext_resource path="res://Assets/UI/Icons/crown_b.png" type="Texture" id=8]
+[ext_resource path="res://Assets/UI/Icons/skull.png" type="Texture" id=9]
+[ext_resource path="res://Assets/UI/Icons/ItemCategories/Armors.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Fonts/DynamicFontRobotoItalic.tres" type="DynamicFont" id=11]
+[ext_resource path="res://Scripts/UI/UIItemInfo.gd" type="Script" id=12]
+
+[sub_resource type="DynamicFont" id=1]
+size = 34
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 18
+font_data = ExtResource( 5 )
+
+[node name="UIItemInfo" type="Control"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -180.0
+margin_right = 1600.0
+rect_min_size = Vector2( 1600, 180 )
+theme = ExtResource( 2 )
+script = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UIFrame" parent="." instance=ExtResource( 1 )]
+rect_min_size = Vector2( 0, 160 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 20.0
+margin_top = -72.0
+margin_right = 360.0
+margin_bottom = 72.0
+rect_min_size = Vector2( 360, 0 )
+custom_constants/separation = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxNameAndTypeContainer" type="VBoxContainer" parent="VBoxContainer"]
+margin_right = 480.0
+margin_bottom = 46.0
+
+[node name="HBoxNameAndTypeContainer" type="HBoxContainer" parent="VBoxContainer/VBoxNameAndTypeContainer"]
+margin_right = 480.0
+margin_bottom = 41.0
+custom_constants/separation = 8
+
+[node name="TextureItemType" type="TextureRect" parent="VBoxContainer/VBoxNameAndTypeContainer/HBoxNameAndTypeContainer"]
+visible = false
+margin_right = 36.0
+margin_bottom = 41.0
+rect_min_size = Vector2( 36, 36 )
+texture = ExtResource( 10 )
+expand = true
+stretch_mode = 6
+
+[node name="LabelItemName" type="Label" parent="VBoxContainer/VBoxNameAndTypeContainer/HBoxNameAndTypeContainer"]
+margin_right = 202.0
+margin_bottom = 41.0
+custom_fonts/font = SubResource( 1 )
+text = "Edge of Duality"
+
+[node name="LabelItemType" type="Label" parent="VBoxContainer/VBoxNameAndTypeContainer/HBoxNameAndTypeContainer"]
+margin_left = 210.0
+margin_right = 354.0
+margin_bottom = 41.0
+size_flags_vertical = 7
+custom_colors/font_color = Color( 1, 1, 1, 0.45098 )
+custom_fonts/font = ExtResource( 11 )
+text = "(Two Handed Weapon)"
+valign = 1
+
+[node name="ColorRectSeparator" type="ColorRect" parent="VBoxContainer/VBoxNameAndTypeContainer"]
+margin_top = 45.0
+margin_right = 480.0
+margin_bottom = 46.0
+rect_min_size = Vector2( 0, 1 )
+color = Color( 1, 1, 1, 0.443137 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxMainStats" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 56.0
+margin_right = 480.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 0, 24 )
+custom_constants/separation = 15
+
+[node name="HBoxAttack" type="HBoxContainer" parent="VBoxContainer/HBoxMainStats"]
+margin_right = 63.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 0, 24 )
+custom_constants/separation = 3
+
+[node name="IconAttack" type="TextureRect" parent="VBoxContainer/HBoxMainStats/HBoxAttack"]
+margin_right = 24.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 6
+
+[node name="LabelAttack" type="Label" parent="VBoxContainer/HBoxMainStats/HBoxAttack"]
+margin_left = 27.0
+margin_top = 1.0
+margin_right = 63.0
+margin_bottom = 23.0
+custom_fonts/font = SubResource( 2 )
+text = "1250"
+
+[node name="HBoxDefense" type="HBoxContainer" parent="VBoxContainer/HBoxMainStats"]
+margin_left = 78.0
+margin_right = 141.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 0, 24 )
+custom_constants/separation = 3
+
+[node name="IconDefense" type="TextureRect" parent="VBoxContainer/HBoxMainStats/HBoxDefense"]
+margin_right = 24.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+texture = ExtResource( 6 )
+expand = true
+stretch_mode = 6
+
+[node name="LabelDefense" type="Label" parent="VBoxContainer/HBoxMainStats/HBoxDefense"]
+margin_left = 27.0
+margin_top = 1.0
+margin_right = 63.0
+margin_bottom = 23.0
+custom_fonts/font = SubResource( 2 )
+text = "1250"
+
+[node name="HBoxPrice" type="HBoxContainer" parent="VBoxContainer/HBoxMainStats"]
+margin_left = 156.0
+margin_right = 216.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 0, 24 )
+custom_constants/separation = 0
+
+[node name="IconPrice" type="TextureRect" parent="VBoxContainer/HBoxMainStats/HBoxPrice"]
+margin_right = 24.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 6
+
+[node name="LabelPrice" type="Label" parent="VBoxContainer/HBoxMainStats/HBoxPrice"]
+margin_left = 24.0
+margin_top = 1.0
+margin_right = 60.0
+margin_bottom = 23.0
+custom_fonts/font = SubResource( 2 )
+text = "1250"
+
+[node name="HBoxSpecialStats" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 90.0
+margin_right = 480.0
+margin_bottom = 114.0
+rect_min_size = Vector2( 0, 24 )
+custom_constants/separation = 15
+
+[node name="HBoxSpecial" type="HBoxContainer" parent="VBoxContainer/HBoxSpecialStats"]
+margin_right = 130.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 0, 24 )
+custom_constants/separation = 3
+
+[node name="lconSpecial" type="TextureRect" parent="VBoxContainer/HBoxSpecialStats/HBoxSpecial"]
+margin_right = 24.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+texture = ExtResource( 8 )
+expand = true
+stretch_mode = 6
+
+[node name="LabelSpecial" type="Label" parent="VBoxContainer/HBoxSpecialStats/HBoxSpecial"]
+margin_left = 27.0
+margin_top = 1.0
+margin_right = 130.0
+margin_bottom = 23.0
+custom_fonts/font = SubResource( 2 )
+text = "Durability Up+"
+
+[node name="HBoxEffect" type="HBoxContainer" parent="VBoxContainer/HBoxSpecialStats"]
+margin_left = 145.0
+margin_right = 306.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 0, 24 )
+custom_constants/separation = 3
+
+[node name="IconEffect" type="TextureRect" parent="VBoxContainer/HBoxSpecialStats/HBoxEffect"]
+margin_right = 24.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+texture = ExtResource( 9 )
+expand = true
+stretch_mode = 6
+
+[node name="LabelEffect" type="Label" parent="VBoxContainer/HBoxSpecialStats/HBoxEffect"]
+margin_left = 27.0
+margin_top = 1.0
+margin_right = 161.0
+margin_bottom = 23.0
+custom_fonts/font = SubResource( 2 )
+text = "Poisons the target"
+
+[node name="LabelDescription" type="RichTextLabel" parent="VBoxContainer"]
+margin_top = 124.0
+margin_right = 480.0
+margin_bottom = 144.0
+rect_min_size = Vector2( 480, 0 )
+bbcode_enabled = true
+bbcode_text = "[i]This is some description, maxium one line.[/i]"
+text = "This is some description, maxium one line."
+fit_content_height = true

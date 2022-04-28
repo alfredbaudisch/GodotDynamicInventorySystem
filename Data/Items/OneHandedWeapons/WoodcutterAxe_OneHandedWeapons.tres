@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Data/Entities/EntityItem.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Sprites/OneHandedWeapons/WoodcutterAxe.png" type="Resource" id=2]
+
+[resource]
+script = ExtResource( 1 )
+category_type = 7
+name = "Woodcutter Axe"
+identifier = "cd2ad308bc742ab54bb84773f21c6e72"
+texture_icon = ExtResource( 2 )
+attack_power = 50
+defense_value = 0
+price = 785
+special_trait = "Rand 409"
+effect = ""
+description = "Random description 973"

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/5 Menu Screen Slide SFX 01.wav-fc1f1b051bbc525ddc620da1a5f263ca.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/5 Menu Screen Slide SFX 01.wav"
+dest_files=[ "res://.import/5 Menu Screen Slide SFX 01.wav-fc1f1b051bbc525ddc620da1a5f263ca.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

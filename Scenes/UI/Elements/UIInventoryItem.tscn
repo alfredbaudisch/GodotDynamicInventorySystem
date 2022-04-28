@@ -1,0 +1,108 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Assets/UI/ButtonBackgrounds/Highlight-Normal.png" type="Texture" id=1]
+[ext_resource path="res://Assets/UI/ButtonBackgrounds/Item-Border-Selected.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/UI/Elements/UIFrame.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/Sprites/TwoHandedWeapons/BroadSword.png" type="Texture" id=4]
+[ext_resource path="res://Scripts/UI/UIInventoryItem.gd" type="Script" id=5]
+
+[sub_resource type="Animation" id=1]
+resource_name = "DeHighlight"
+length = 0.1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("UIInventoryItem/UIFrame/ColorHighlighted:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 2, 0.5 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0.490196 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "Highlight"
+length = 0.1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("UIInventoryItem/UIFrame/ColorHighlighted:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1 ),
+"transitions": PoolRealArray( 0.5, -0.5, 2 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.756863 ), Color( 1, 1, 1, 0.490196 ) ]
+}
+
+[node name="UIInventoryItem" type="Control"]
+margin_right = 82.0
+margin_bottom = 82.0
+rect_min_size = Vector2( 82, 82 )
+script = ExtResource( 5 )
+
+[node name="UIFrame" parent="." instance=ExtResource( 3 )]
+
+[node name="TextureItemBackground" type="TextureRect" parent="UIFrame"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -39.0
+margin_top = -39.0
+margin_right = 39.0
+margin_bottom = 39.0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureItemSprite" type="TextureRect" parent="UIFrame/TextureItemBackground"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -38.0
+margin_top = -38.0
+margin_right = 38.0
+margin_bottom = 38.0
+texture = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorHighlighted" type="ColorRect" parent="UIFrame"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -39.0
+margin_top = -39.0
+margin_right = 39.0
+margin_bottom = 39.0
+color = Color( 1, 1, 1, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonSelection" type="TextureButton" parent="UIFrame"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+focus_mode = 0
+enabled_focus_mode = 0
+texture_normal = ExtResource( 2 )
+expand = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="UIFrame"]
+root_node = NodePath("../../..")
+anims/DeHighlight = SubResource( 1 )
+anims/Highlight = SubResource( 2 )
+
+[connection signal="hide" from="." to="." method="_on_UIInventoryItem_hide"]

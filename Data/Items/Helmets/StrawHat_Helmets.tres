@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Data/Entities/EntityItem.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Sprites/Helmets/StrawHat.png" type="Resource" id=2]
+
+[resource]
+script = ExtResource( 1 )
+category_type = 5
+name = "Straw Hat"
+identifier = "63da6d2e153239e48e51d11e99f48dcc"
+texture_icon = ExtResource( 2 )
+attack_power = 0
+defense_value = 15
+price = 775
+special_trait = ""
+effect = ""
+description = "Random description 697"

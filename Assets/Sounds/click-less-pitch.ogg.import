@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/click-less-pitch.ogg-6c018c0581eb4638041a302b76746426.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sounds/click-less-pitch.ogg"
+dest_files=[ "res://.import/click-less-pitch.ogg-6c018c0581eb4638041a302b76746426.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

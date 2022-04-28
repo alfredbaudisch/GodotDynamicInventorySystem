@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Data/Entities/EntityItem.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Sprites/OneHandedWeapons/SlaveSword.png" type="Resource" id=2]
+
+[resource]
+script = ExtResource( 1 )
+category_type = 7
+name = "Slave Sword"
+identifier = "08d69b2882a0c47f578427d8e00f62d0"
+texture_icon = ExtResource( 2 )
+attack_power = 47
+defense_value = 0
+price = 722
+special_trait = "Rand 979"
+effect = "Rand 305"
+description = "Random description 475"

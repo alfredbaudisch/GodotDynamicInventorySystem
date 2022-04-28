@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Data/Entities/EntityItem.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Sprites/Armors/Deserter.png" type="Resource" id=2]
+
+[resource]
+script = ExtResource( 1 )
+category_type = 0
+name = "Deserter"
+identifier = "0482ece0af147b570c9035944d6b1453"
+texture_icon = ExtResource( 2 )
+attack_power = 0
+defense_value = 5
+price = 390
+special_trait = ""
+effect = ""
+description = "Random description 59"

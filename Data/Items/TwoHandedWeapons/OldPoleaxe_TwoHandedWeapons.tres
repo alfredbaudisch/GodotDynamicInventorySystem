@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Data/Entities/EntityItem.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Sprites/TwoHandedWeapons/OldPoleaxe.png" type="Resource" id=2]
+
+[resource]
+script = ExtResource( 1 )
+category_type = 8
+name = "Old Poleaxe"
+identifier = "398b0edd7c9a9263ffba014b7fc422a2"
+texture_icon = ExtResource( 2 )
+attack_power = 68
+defense_value = 23
+price = 56
+special_trait = "Rand 297"
+effect = ""
+description = "Random description 319"

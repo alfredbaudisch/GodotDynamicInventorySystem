@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Data/Entities/EntityItem.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Sprites/TwoHandedWeapons/WoodcutterPoleaxe.png" type="Resource" id=2]
+
+[resource]
+script = ExtResource( 1 )
+category_type = 8
+name = "Woodcutter Poleaxe"
+identifier = "fd51ba6c25064749724c4334dbbfbf27"
+texture_icon = ExtResource( 2 )
+attack_power = 135
+defense_value = 22
+price = 312
+special_trait = "Rand 554"
+effect = ""
+description = "Random description 479"

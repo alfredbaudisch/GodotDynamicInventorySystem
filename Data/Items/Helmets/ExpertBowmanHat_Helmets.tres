@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Data/Entities/EntityItem.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Sprites/Helmets/ExpertBowmanHat.png" type="Resource" id=2]
+
+[resource]
+script = ExtResource( 1 )
+category_type = 5
+name = "Expert Bowman Hat"
+identifier = "3fc3e07e627f9051b08820cfa2e16803"
+texture_icon = ExtResource( 2 )
+attack_power = 0
+defense_value = 19
+price = 7
+special_trait = ""
+effect = "Rand 491"
+description = "Random description 960"

@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scenes/UI/Elements/UIInventoryItem.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scripts/UI/UIInventoryGridItem.gd" type="Script" id=2]
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[node name="UIInventoryGridItem" type="Control"]
+margin_right = 82.0
+margin_bottom = 82.0
+rect_min_size = Vector2( 86, 82 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/separation = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VSeparator" type="VSeparator" parent="HBoxContainer"]
+margin_right = 4.0
+margin_bottom = 82.0
+custom_constants/separation = 4
+custom_styles/separator = SubResource( 3 )
+
+[node name="UIInventoryItem" parent="HBoxContainer" instance=ExtResource( 1 )]
+margin_left = 4.0
+margin_right = 86.0

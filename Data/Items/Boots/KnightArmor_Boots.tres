@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Data/Entities/EntityItem.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Sprites/Boots/KnightArmor.png" type="Resource" id=2]
+
+[resource]
+script = ExtResource( 1 )
+category_type = 2
+name = "Knight Armor"
+identifier = "a81c05f0b27cc64b1cbcc4b7c45890fb"
+texture_icon = ExtResource( 2 )
+attack_power = 0
+defense_value = 12
+price = 141
+special_trait = ""
+effect = "Rand 780"
+description = "Random description 603"

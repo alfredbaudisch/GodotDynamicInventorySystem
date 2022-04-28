@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Data/Entities/EntityItem.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Sprites/Boots/PeasantClothing.png" type="Resource" id=2]
+
+[resource]
+script = ExtResource( 1 )
+category_type = 2
+name = "Peasant Clothing"
+identifier = "79a3bdb4f56e05d2bf7e925f37c7ce6b"
+texture_icon = ExtResource( 2 )
+attack_power = 0
+defense_value = 6
+price = 961
+special_trait = "Rand 995"
+effect = "Rand 481"
+description = "Random description 849"

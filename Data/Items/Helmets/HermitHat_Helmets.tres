@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Data/Entities/EntityItem.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Sprites/Helmets/HermitHat.png" type="Resource" id=2]
+
+[resource]
+script = ExtResource( 1 )
+category_type = 5
+name = "Hermit Hat"
+identifier = "dfdcac43b0df2b3a59d2289ad99d9769"
+texture_icon = ExtResource( 2 )
+attack_power = 0
+defense_value = 24
+price = 465
+special_trait = ""
+effect = "Rand 451"
+description = "Random description 575"

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Data/Entities/EntityItem.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Sprites/Bows/HunterBow.png" type="Resource" id=2]
+
+[resource]
+script = ExtResource( 1 )
+category_type = 3
+name = "Hunter Bow"
+identifier = "e4d63b65fcb54efe7aef7c284e36dc33"
+texture_icon = ExtResource( 2 )
+attack_power = 25
+defense_value = 0
+price = 344
+special_trait = ""
+effect = "Rand 214"
+description = "Random description 820"

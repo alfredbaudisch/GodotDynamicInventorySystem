@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Data/Entities/EntityItem.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Sprites/TwoHandedWeapons/BroadSword.png" type="Resource" id=2]
+
+[resource]
+script = ExtResource( 1 )
+category_type = 8
+name = "Broad Sword"
+identifier = "9b6db9ca2dbace5b56bea4b0cc1fffd0"
+texture_icon = ExtResource( 2 )
+attack_power = 69
+defense_value = 7
+price = 644
+special_trait = ""
+effect = ""
+description = "Random description 176"

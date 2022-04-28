@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Data/Entities/EntityItemCategoryDisplay.gd" type="Script" id=1]
+[ext_resource path="res://Assets/UI/Icons/ItemCategories/Boots.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+display_name = "Boots"
+types = [ 2 ]
+texture_icon = ExtResource( 2 )

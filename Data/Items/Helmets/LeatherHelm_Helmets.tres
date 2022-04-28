@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Data/Entities/EntityItem.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Sprites/Helmets/LeatherHelm.png" type="Resource" id=2]
+
+[resource]
+script = ExtResource( 1 )
+category_type = 5
+name = "Leather Helm"
+identifier = "4a922fda7c219889d742fbd8f2ed4210"
+texture_icon = ExtResource( 2 )
+attack_power = 0
+defense_value = 18
+price = 165
+special_trait = "Rand 453"
+effect = "Rand 132"
+description = "Random description 202"

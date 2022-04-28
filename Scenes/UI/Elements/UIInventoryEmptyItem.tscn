@@ -1,0 +1,9 @@
+[gd_scene format=2]
+
+[node name="UIInventoryEmptyItem" type="Control"]
+margin_right = 82.0
+margin_bottom = 82.0
+rect_min_size = Vector2( 82, 82 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

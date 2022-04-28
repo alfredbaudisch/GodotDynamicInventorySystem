@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Data/Entities/EntityItem.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Sprites/Boots/FireAdept.png" type="Resource" id=2]
+
+[resource]
+script = ExtResource( 1 )
+category_type = 2
+name = "Fire Adept"
+identifier = "d2f160277b27340c47cb01bc58dddc7d"
+texture_icon = ExtResource( 2 )
+attack_power = 0
+defense_value = 19
+price = 966
+special_trait = ""
+effect = ""
+description = "Random description 459"

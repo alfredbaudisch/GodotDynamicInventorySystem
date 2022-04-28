@@ -1,0 +1,4 @@
+[gd_resource type="DynamicFontData" format=2]
+
+[resource]
+font_path = "res://Assets/Fonts/RobotoCondensed-BoldItalic.ttf"

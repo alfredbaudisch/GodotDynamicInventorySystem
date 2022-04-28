@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Data/Entities/EntityItem.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Sprites/Gloves/Slave.png" type="Resource" id=2]
+
+[resource]
+script = ExtResource( 1 )
+category_type = 4
+name = "Slave"
+identifier = "3808a9271e36fbcf5bcd47c7e7f0faf9"
+texture_icon = ExtResource( 2 )
+attack_power = 0
+defense_value = 8
+price = 478
+special_trait = "Rand 723"
+effect = ""
+description = "Random description 941"

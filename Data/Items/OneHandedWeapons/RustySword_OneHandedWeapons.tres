@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Data/Entities/EntityItem.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Sprites/OneHandedWeapons/RustySword.png" type="Resource" id=2]
+
+[resource]
+script = ExtResource( 1 )
+category_type = 7
+name = "Rusty Sword"
+identifier = "5df033cc4ec56479615bd5a7cfce3e38"
+texture_icon = ExtResource( 2 )
+attack_power = 20
+defense_value = 0
+price = 583
+special_trait = "Rand 700"
+effect = ""
+description = "Random description 27"
