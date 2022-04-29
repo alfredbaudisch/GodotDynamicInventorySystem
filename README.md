@@ -44,7 +44,7 @@ This source-code is built from scratch in the [**Complete Godot Course: Game Use
 You are going to **learn EVERYTHING** there is about creating **complex User Interfaces with Godot**, from scratch, as well as **coding and adding behavior to those interfaces, creating truly dynamic UI screens and components.**  
 
 ## Sponsorship and Donations
-You can support the development of my open-source contributions and this project on [Patreon](https://www.patreon.com/alfredbaudisch) or with a [PayPal donation](https://www.paypal.com/donate?hosted_button_id=FC5FTRRE3548C). Or of course, [you can get the course](https://bit.ly/GodotUI) and learn how to make all of this from scratch.
+You can support the development of my open-source contributions and this project on [Patreon](https://www.patreon.com/alfredbaudisch), a [PayPal donation](https://www.paypal.com/donate?hosted_button_id=FC5FTRRE3548C) or [buy me a coffee with Ko-fi](https://ko-fi.com/alfredbaudisch). Or of course, [you can get the course](https://bit.ly/GodotUI) and learn how to make all of this from scratch.
 
 Patrons and donors of any tier will have their name listed here. Patrons of the **Sponsors** tier or higher, can also have a link and a logo listed here.
 
