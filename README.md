@@ -17,7 +17,7 @@ Godot's fully dynamic inventory system, UI with infinite scrolling, item categor
 ## Project Features
 Built from scratch, inspired by the Zelda Breath of the Wild inventory system and inventory UI, this is an extensive system:
 
--   **Fully Dynamic inventory and equipment system**: a database items separated **by categories** and also **groups of categories**, for example,  **One Handed Weapons and Two Handed Weapons are grouped under a Weapons group**, while keeping the One and Two Handed classifications.
+-   **Fully Dynamic inventory and equipment system**: a database of items separated **by categories** and also **groups of categories**, for example,  **One Handed Weapons and Two Handed Weapons are grouped under a Weapons group**, while keeping the One and Two Handed classifications.
 - **Custom Scriptable Objects (Custom Godot's Resources)** with different attributes for items and equipment, **grouped in a database of items** (folder based, with Resource files).
 -   **Responsive layout** adjustable for different aspect ratios.
 -   **Custom UI widgets** (custom Control Nodes and Scenes)
@@ -27,7 +27,7 @@ Built from scratch, inspired by the Zelda Breath of the Wild inventory system an
 -   **Equippable Item slots that accept configurable categories** of items and show the items equipped in these slots
 -   Item and **equipment attributes**
 -   Handling and **syncing of One Handed and Two Handed items,** while automatically unequipping items if both hands are equipped
--  **Pickable / Pickup items, dynamically adding them to the inventory** and list them in the inventory screen, in the correct category
+-  **Pickable / Pickup items, dynamically adding them to the inventory** and listing them in the inventory screen, in the correct category
 - UI sounds
 - Godot version: **Godot 3.4.3** (Godot 4 is still too unstable and susceptible for breaking changes. When Godot 4 stable release comes out, the course and this source code will be upgraded).  
 
