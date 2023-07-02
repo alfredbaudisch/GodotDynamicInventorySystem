@@ -40,7 +40,7 @@ This source-code is built from scratch in the [**Complete Godot Course: Game Use
 
 ### Course Links
 - **[Itch](https://bit.ly/GodotUI)** (DRM-free videos)
-- **[Skillshare](https://skl.sh/35VyvE1)**
+- **[Udemy](https://www.udemy.com/course/godot-engine-the-ultimate-inventory-dynamic-system-and-ui-course/?referralCode=E1A8C3E5AF8B9EE50CEE)**
 
 You are going to **learn EVERYTHING** there is about creating **complex User Interfaces with Godot**, from scratch, as well as **coding and adding behavior to those interfaces, creating truly dynamic UI screens and components.**  
 
