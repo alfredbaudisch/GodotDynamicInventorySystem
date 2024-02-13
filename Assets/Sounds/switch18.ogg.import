@@ -1,15 +1,19 @@
 [remap]
 
-importer="ogg_vorbis"
-type="AudioStreamOGGVorbis"
-path="res://.import/switch18.ogg-e46ad704d8dbd1ec51bf834310825b42.oggstr"
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ppqvjmv2eb1a"
+path="res://.godot/imported/switch18.ogg-e46ad704d8dbd1ec51bf834310825b42.oggvorbisstr"
 
 [deps]
 
 source_file="res://Assets/Sounds/switch18.ogg"
-dest_files=[ "res://.import/switch18.ogg-e46ad704d8dbd1ec51bf834310825b42.oggstr" ]
+dest_files=["res://.godot/imported/switch18.ogg-e46ad704d8dbd1ec51bf834310825b42.oggvorbisstr"]
 
 [params]
 
 loop=false
 loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

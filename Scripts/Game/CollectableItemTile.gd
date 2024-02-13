@@ -1,7 +1,7 @@
 extends Area2D
 class_name CollectableItemTile
 
-export(Resource) var item setget ,get_item
+@export var item: Resource: get = get_item
 
 
 func get_item() -> EntityItem:

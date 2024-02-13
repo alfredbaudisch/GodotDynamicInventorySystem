@@ -1,194 +1,195 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=15 format=3 uid="uid://bhi35og01afe1"]
 
-[ext_resource path="res://Scenes/UI/UIInventory.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Assets/UI/ButtonBackgrounds/white.png" type="Texture" id=2]
-[ext_resource path="res://Assets/Shaders/ShaderCanvasItemBlur.gdshader" type="Shader" id=3]
-[ext_resource path="res://Assets/Fonts/DynamicFontDataRobotoCondensedBoldItalic.tres" type="DynamicFontData" id=4]
-[ext_resource path="res://Assets/DefaultTheme.tres" type="Theme" id=5]
-[ext_resource path="res://Assets/Fonts/DynamicFontDataRobotoCondensedRegular.tres" type="DynamicFontData" id=6]
-[ext_resource path="res://Assets/UI/Icons/pouch.png" type="Texture" id=7]
-[ext_resource path="res://Assets/UI/Prompts/Tab_Key_Light.png" type="Texture" id=8]
-[ext_resource path="res://Assets/Fonts/DynamicFontRobotoBoldItalic.tres" type="DynamicFont" id=9]
-[ext_resource path="res://Scenes/UI/Elements/UICharacterStats.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Scripts/UI/UICharacterGold.gd" type="Script" id=11]
+[ext_resource type="PackedScene" uid="uid://cew0or11r7y4a" path="res://Scenes/UI/UIInventory.tscn" id="1"]
+[ext_resource type="Texture2D" uid="uid://dygnom1vy56vo" path="res://Assets/UI/ButtonBackgrounds/white.png" id="2"]
+[ext_resource type="Shader" path="res://Assets/Shaders/ShaderCanvasItemBlur.gdshader" id="3"]
+[ext_resource type="FontFile" path="res://Assets/Fonts/DynamicFontDataRobotoCondensedBoldItalic.tres" id="4"]
+[ext_resource type="Theme" uid="uid://b8i8kalmfw4ow" path="res://Assets/DefaultTheme.tres" id="5"]
+[ext_resource type="FontFile" path="res://Assets/Fonts/DynamicFontDataRobotoCondensedRegular.tres" id="6"]
+[ext_resource type="Texture2D" uid="uid://byt5t7dc3oba5" path="res://Assets/UI/Icons/pouch.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://qbwl4a7ukmt2" path="res://Assets/UI/Prompts/Tab_Key_Light.png" id="8"]
+[ext_resource type="FontFile" path="res://Assets/Fonts/DynamicFontRobotoBoldItalic.tres" id="9"]
+[ext_resource type="PackedScene" uid="uid://deyph180b36uh" path="res://Scenes/UI/Elements/UICharacterStats.tscn" id="10"]
+[ext_resource type="Script" path="res://Scripts/UI/UICharacterGold.gd" id="11"]
 
-[sub_resource type="ShaderMaterial" id=3]
-shader = ExtResource( 3 )
-shader_param/blur_amount = 3.6
+[sub_resource type="ShaderMaterial" id="3"]
+shader = ExtResource("3")
+shader_parameter/blur_amount = 3.5
 
-[sub_resource type="DynamicFont" id=4]
-size = 40
-font_data = ExtResource( 4 )
+[sub_resource type="FontFile" id="4"]
+fallbacks = Array[Font]([ExtResource("4")])
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/40/0 = Vector2(0, 0)
+cache/0/40/0/ascent = 0.0
+cache/0/40/0/descent = 0.0
+cache/0/40/0/underline_position = 0.0
+cache/0/40/0/underline_thickness = 0.0
+cache/0/40/0/scale = 1.0
+cache/0/40/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/40/0/kerning_overrides/40/0 = Vector2(0, 0)
 
-[sub_resource type="DynamicFont" id=5]
-size = 24
-font_data = ExtResource( 6 )
+[sub_resource type="FontFile" id="5"]
+fallbacks = Array[Font]([ExtResource("6")])
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
 
 [node name="UIInventoryScreen" type="Control"]
+custom_minimum_size = Vector2(1280, 720)
+layout_mode = 3
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-rect_min_size = Vector2( 1280, 720 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="TextureBlur" type="TextureRect" parent="."]
-material = SubResource( 3 )
+material = SubResource("3")
+custom_minimum_size = Vector2(1680, 1040)
+layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -200.0
-margin_top = -160.0
-margin_right = 200.0
-margin_bottom = 160.0
-rect_min_size = Vector2( 1680, 1040 )
+offset_left = -200.0
+offset_top = -160.0
+offset_right = 200.0
+offset_bottom = 160.0
 size_flags_horizontal = 2
 size_flags_vertical = 2
-texture = ExtResource( 2 )
-expand = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
+texture = ExtResource("2")
+expand_mode = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(1280, 720)
+layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
-rect_min_size = Vector2( 1280, 720 )
-custom_constants/separation = 0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+theme_override_constants/separation = 0
 
 [node name="ControlHeader" type="Control" parent="VBoxContainer"]
-margin_right = 1280.0
-margin_bottom = 100.0
-rect_min_size = Vector2( 0, 100 )
-theme = ExtResource( 5 )
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme = ExtResource("5")
 
 [node name="ColorRectBackground" type="ColorRect" parent="VBoxContainer/ControlHeader"]
+layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color( 0.686275, 0.686275, 0.686275, 0.164706 )
+color = Color(0.686275, 0.686275, 0.686275, 0.164706)
 
 [node name="LabelTitle" type="Label" parent="VBoxContainer/ControlHeader"]
+layout_mode = 0
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -74.5
-margin_top = -24.0
-margin_right = 74.5
-margin_bottom = 24.0
-custom_fonts/font = SubResource( 4 )
+offset_left = -74.5
+offset_top = -24.0
+offset_right = 74.5
+offset_bottom = 24.0
+theme_override_fonts/font = SubResource("4")
+theme_override_font_sizes/font_size = 40
 text = "Inventory"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="ColorRectSeparator" type="ColorRect" parent="VBoxContainer/ControlHeader"]
+custom_minimum_size = Vector2(0, 1)
+layout_mode = 0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-rect_min_size = Vector2( 0, 1 )
-color = Color( 0.478431, 0.478431, 0.478431, 0.462745 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+color = Color(0.478431, 0.478431, 0.478431, 0.462745)
 
 [node name="HBoxGold" type="HBoxContainer" parent="VBoxContainer/ControlHeader"]
+layout_mode = 0
 anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-margin_left = -150.0
-margin_top = -32.0
-margin_bottom = 32.0
-custom_constants/separation = 10
-script = ExtResource( 11 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+offset_left = -150.0
+offset_top = -32.0
+offset_bottom = 32.0
+theme_override_constants/separation = 10
+script = ExtResource("11")
 
 [node name="TextureRect" type="TextureRect" parent="VBoxContainer/ControlHeader/HBoxGold"]
-margin_right = 32.0
-margin_bottom = 64.0
-rect_min_size = Vector2( 32, 32 )
-texture = ExtResource( 7 )
-expand = true
-stretch_mode = 6
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture = ExtResource("7")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="LabelGold" type="Label" parent="VBoxContainer/ControlHeader/HBoxGold"]
-margin_left = 42.0
-margin_top = 17.0
-margin_right = 90.0
-margin_bottom = 46.0
-custom_fonts/font = SubResource( 5 )
+layout_mode = 2
+theme_override_fonts/font = SubResource("5")
 text = "4456"
 
-[node name="UICharacterStats" parent="VBoxContainer/ControlHeader" instance=ExtResource( 10 )]
+[node name="UICharacterStats" parent="VBoxContainer/ControlHeader" instance=ExtResource("10")]
+layout_mode = 1
+anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-margin_left = 60.0
-margin_top = -16.0
-margin_right = 300.0
-margin_bottom = 16.0
+offset_left = 60.0
+offset_top = -16.0
+offset_right = 300.0
+offset_bottom = 16.0
+grow_vertical = 2
 
-[node name="UIInventory" parent="VBoxContainer" instance=ExtResource( 1 )]
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 0.0
-margin_top = 100.0
-margin_right = 1280.0
-margin_bottom = 660.0
+[node name="UIInventory" parent="VBoxContainer" instance=ExtResource("1")]
+layout_mode = 2
 
 [node name="ControlFooter" type="Control" parent="VBoxContainer"]
-margin_top = 660.0
-margin_right = 1280.0
-margin_bottom = 720.0
-rect_min_size = Vector2( 0, 60 )
-theme = ExtResource( 5 )
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme = ExtResource("5")
 
 [node name="ColorRectBackground" type="ColorRect" parent="VBoxContainer/ControlFooter"]
+layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color( 0.686275, 0.686275, 0.686275, 0.164706 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+color = Color(0.686275, 0.686275, 0.686275, 0.164706)
 
 [node name="ColorRectSeparator" type="ColorRect" parent="VBoxContainer/ControlFooter"]
+custom_minimum_size = Vector2(0, 1)
+layout_mode = 0
 anchor_right = 1.0
-rect_min_size = Vector2( 0, 1 )
-color = Color( 0.478431, 0.478431, 0.478431, 0.462745 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+color = Color(0.478431, 0.478431, 0.478431, 0.462745)
 
 [node name="HBoxPrompts" type="HBoxContainer" parent="VBoxContainer/ControlFooter"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 0
 anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-margin_left = -160.0
-margin_top = -20.0
-margin_bottom = 20.0
-rect_min_size = Vector2( 0, 40 )
+offset_left = -160.0
+offset_top = -20.0
+offset_bottom = 20.0
 
 [node name="TexturePromptClose" type="TextureButton" parent="VBoxContainer/ControlFooter/HBoxPrompts"]
-margin_right = 40.0
-margin_bottom = 40.0
-rect_min_size = Vector2( 40, 40 )
-texture_normal = ExtResource( 8 )
-expand = true
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+texture_normal = ExtResource("8")
+ignore_texture_size = true
 stretch_mode = 5
 
 [node name="LabelClose" type="Label" parent="VBoxContainer/ControlFooter/HBoxPrompts"]
-margin_left = 44.0
-margin_top = 10.0
-margin_right = 80.0
-margin_bottom = 29.0
-custom_fonts/font = ExtResource( 9 )
+layout_mode = 2
+theme_override_fonts/font = ExtResource("9")
 text = "Close"
 
 [connection signal="draw" from="VBoxContainer/ControlHeader/HBoxGold" to="VBoxContainer/ControlHeader/HBoxGold" method="_on_HBoxGold_draw"]

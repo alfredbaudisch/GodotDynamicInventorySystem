@@ -1,9 +1,9 @@
 extends ControlWithItem
 
-onready var _button : TextureButton = $UIFrame/ButtonSelection setget ,get_button
-onready var _texture_item_sprite := $UIFrame/TextureItemBackground/TextureItemSprite
-onready var _texture_background := $UIFrame/TextureItemBackground
-onready var _animation_player := $UIFrame/AnimationPlayer
+@onready var _button : TextureButton = $UIFrame/ButtonSelection: get = get_button
+@onready var _texture_item_sprite := $UIFrame/TextureItemBackground/TextureItemSprite
+@onready var _texture_background := $UIFrame/TextureItemBackground
+@onready var _animation_player := $UIFrame/AnimationPlayer
 
 var _texture_background_normal := preload("res://Assets/UI/ButtonBackgrounds/Highlight-Normal.png")
 var _texture_background_equipped := preload("res://Assets/UI/ButtonBackgrounds/Highlight-Equipped.png")
@@ -15,12 +15,12 @@ func _ready() -> void:
 	deselect()	
 	_button.set_visible(true)
 	
-	Events.connect("on_item_equipped", self, "_on_item_equipped")
-	Events.connect("on_item_unequipped", self, "_on_item_unequipped")
+	Events.on_item_equipped.connect(_on_item_equipped)
+	Events.on_item_unequipped.connect(_on_item_unequipped)
 	
 	
 func set_item(value : EntityItem) -> void:
-	.set_item(value)
+	super.set_item(value)
 	_texture_item_sprite.set_texture(item.texture_icon)
 	_sync_item_equipped()
 
@@ -49,7 +49,7 @@ func get_button() -> TextureButton:
 
 
 func _sync_item_equipped() -> void:
-	var texture : Texture
+	var texture : Texture2D
 	
 	if GameState.player_check_is_item_equipped(item):
 		texture = _texture_background_equipped

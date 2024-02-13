@@ -1,15 +1,15 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=5 format=3 uid="uid://3iumfcli4c37"]
 
-[ext_resource path="res://Data/Items/Armors/Hunter_Armors.tres" type="Resource" id=1]
-[ext_resource path="res://Scenes/Game/CollectableItemTile.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Assets/Tiles/colored_tilemap_packed.png" type="Texture" id=3]
+[ext_resource type="Resource" path="res://Data/Items/Armors/Hunter_Armors.tres" id="1"]
+[ext_resource type="PackedScene" uid="uid://bl53xr14t4s" path="res://Scenes/Game/CollectableItemTile.tscn" id="2"]
+[ext_resource type="Texture2D" uid="uid://dciqg0wlqwrle" path="res://Assets/Tiles/colored_tilemap_packed.png" id="3"]
 
-[sub_resource type="AtlasTexture" id=1]
-atlas = ExtResource( 3 )
-region = Rect2( 80, 16, 8, 8 )
+[sub_resource type="AtlasTexture" id="1"]
+atlas = ExtResource("3")
+region = Rect2(80, 16, 8, 8)
 
-[node name="HunterArmor" instance=ExtResource( 2 )]
-item = ExtResource( 1 )
+[node name="HunterArmor" instance=ExtResource("2")]
+item = ExtResource("1")
 
-[node name="Sprite" parent="." index="0"]
-texture = SubResource( 1 )
+[node name="Sprite2D" parent="." index="0"]
+texture = SubResource("1")

@@ -1,15 +1,19 @@
 [remap]
 
-importer="ogg_vorbis"
-type="AudioStreamOGGVorbis"
-path="res://.import/inventory-close.ogg-f82eb900163f2ecc01f943de33b7ef29.oggstr"
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ct2m7euifmp4l"
+path="res://.godot/imported/inventory-close.ogg-f82eb900163f2ecc01f943de33b7ef29.oggvorbisstr"
 
 [deps]
 
 source_file="res://Assets/Sounds/inventory-close.ogg"
-dest_files=[ "res://.import/inventory-close.ogg-f82eb900163f2ecc01f943de33b7ef29.oggstr" ]
+dest_files=["res://.godot/imported/inventory-close.ogg-f82eb900163f2ecc01f943de33b7ef29.oggvorbisstr"]
 
 [params]
 
 loop=false
 loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

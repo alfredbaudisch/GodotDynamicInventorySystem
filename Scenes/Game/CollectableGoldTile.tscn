@@ -1,22 +1,23 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=5 format=3 uid="uid://c6yvkfijxbjmg"]
 
-[ext_resource path="res://Assets/Tiles/colored_tilemap_packed.png" type="Texture" id=1]
-[ext_resource path="res://Scripts/Game/CollectableGoldTile.gd" type="Script" id=2]
+[ext_resource type="Texture2D" uid="uid://dciqg0wlqwrle" path="res://Assets/Tiles/colored_tilemap_packed.png" id="1"]
+[ext_resource type="Script" path="res://Scripts/Game/CollectableGoldTile.gd" id="2"]
 
-[sub_resource type="AtlasTexture" id=6]
-atlas = ExtResource( 1 )
-region = Rect2( 80, 56, 8, 8 )
+[sub_resource type="AtlasTexture" id="6"]
+atlas = ExtResource("1")
+region = Rect2(80, 56, 8, 8)
 
-[sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 4, 4 )
+[sub_resource type="RectangleShape2D" id="5"]
+size = Vector2(8, 8)
 
 [node name="CollectableGoldTile" type="Area2D" groups=["Gold"]]
-scale = Vector2( 5, 5 )
-script = ExtResource( 2 )
+scale = Vector2(5, 5)
+script = ExtResource("2")
 amount = 5
 
-[node name="Sprite" type="Sprite" parent="."]
-texture = SubResource( 6 )
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = SubResource("6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 5 )
+shape = SubResource("5")

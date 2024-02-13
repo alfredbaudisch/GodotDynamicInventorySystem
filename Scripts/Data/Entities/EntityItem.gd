@@ -1,24 +1,24 @@
-tool # do not add tool in the 1st version
+@tool # do not add tool in the 1st version
 extends Resource
 class_name EntityItem
 
-export(Types.ItemCategoryTypes) var category_type
-export(String) var name setget set_name # do not add setget in the 1st version
-export(String) var identifier setget set_identifier # do not add setget in the 1st version, make the user input the name manually
-export(Texture) var texture_icon
-export(int) var attack_power = 0
-export(int) var defense_value = 0
-export(float) var price = 0.0
-export(String) var special_trait
-export(String) var effect
-export(String) var description
+@export var category_type : Types.ItemCategoryTypes
+@export var name: String: set = set_item_name
+@export var identifier: String: set = set_identifier
+@export var texture_icon: Texture2D
+@export var attack_power: int = 0
+@export var defense_value: int = 0
+@export var price: float = 0.0
+@export var special_trait: String
+@export var effect: String
+@export var description: String
 
 #
 # Setting an unique identifier automatically
 # Show this in an update or advanced video
 #
 
-func set_name(value : String) -> void:
+func set_item_name(value : String) -> void:
 	name = value.trim_prefix(" ").trim_suffix(" ")
 
 	if not (name and name != ""):

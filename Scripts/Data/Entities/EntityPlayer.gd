@@ -1,10 +1,10 @@
 extends Resource
 class_name EntityPlayer
 
-export(int) var level = 1
-export(int) var gold = 0
-export(float) var experience = 0
-export(Array, Resource) var inventory = []
+@export var level: int = 1
+@export var gold: int = 0
+@export var experience: float = 0
+@export var inventory = [] # (Array, Resource)
 var equipped_helmet : Resource
 var equipped_armor : Resource
 var equipped_gloves : Resource
@@ -13,7 +13,8 @@ var equipped_off_hand : Resource
 var equipped_weapon : Resource
 var equipped_ammo : Resource
 
-var inventory_by_category : Dictionary setget ,get_inventory_by_category
+var inventory_by_category : Dictionary: get = get_inventory_by_category
+var _inventory_by_category : Dictionary
 
 # Make inventory items of the same type
 # to not share instances. Each item instance must be unique.
@@ -22,7 +23,7 @@ var inventory_by_category : Dictionary setget ,get_inventory_by_category
 # unique instances, all 4 broad swords will be marked in the 
 # inventory as equipped.
 func make_inventory_unique() -> void:
-	if not inventory.empty():
+	if not inventory.is_empty():
 		for idx in range(inventory.size()):
 			if inventory[idx]:
 				inventory[idx] = inventory[idx].duplicate()
@@ -55,21 +56,21 @@ func get_equipped_item_for_category_type(category_type : int) -> EntityItem:
 
 
 func index_inventory() -> void:
-	inventory_by_category = {}
+	_inventory_by_category = {}
 	
 	for item in inventory:
 		if item is EntityItem:
-			if inventory_by_category.has(item.category_type):
-				inventory_by_category[item.category_type].append(item)
+			if _inventory_by_category.has(item.category_type):
+				_inventory_by_category[item.category_type].append(item)
 			else:
-				inventory_by_category[item.category_type] = [item]
+				_inventory_by_category[item.category_type] = [item]
 
 		
 func get_inventory_by_category() -> Dictionary:
-	if not inventory_by_category:
+	if not _inventory_by_category:
 		index_inventory()
 		
-	return inventory_by_category
+	return _inventory_by_category
 
 
 func append_to_inventory(item : EntityItem) -> void:

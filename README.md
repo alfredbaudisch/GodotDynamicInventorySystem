@@ -1,10 +1,11 @@
 # Dynamic Inventory System and UI for Godot
-![Godot 3.4](https://img.shields.io/badge/godot-v3.4-%23478cbf) [![Donate using PayPal](https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-PayPal-green.svg)](https://www.paypal.com/donate?hosted_button_id=FC5FTRRE3548C) [![Become a patron](https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Patreon-Badge.svg)](https://www.patreon.com/alfredbaudisch) <a href='https://ko-fi.com/alfredbaudisch' target='_blank'><img height='22' style='border:0px;height:22px;' src='https://az743702.vo.msecnd.net/cdn/kofi3.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' title='Buy Me a Coffee at ko-fi.com' /></a>
+![Godot 4.2](https://img.shields.io/badge/godot-v4.2-%23478cbf) [![Donate using PayPal](https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-PayPal-green.svg)](https://www.paypal.com/donate?hosted_button_id=FC5FTRRE3548C) [![Become a patron](https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Patreon-Badge.svg)](https://www.patreon.com/alfredbaudisch) <a href='https://ko-fi.com/alfredbaudisch' target='_blank'><img height='22' style='border:0px;height:22px;' src='https://az743702.vo.msecnd.net/cdn/kofi3.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' title='Buy Me a Coffee at ko-fi.com' /></a>
 
 Godot's fully dynamic inventory system, UI with infinite scrolling, item categories, equipment slots, database of items, inspired by Zelda Breath of the Wild.
 
 ![](./Assets/Docs/GodotInventoryUI-FinalSystem3.gif)
 
+-   [Godot Versions](#godot-versions)
 -   [Project Features](#project-features)
 -   [Video Course](#video-course)
     -   [Course Links](#course-links)
@@ -13,6 +14,10 @@ Godot's fully dynamic inventory system, UI with infinite scrolling, item categor
 -   [Updates](#updates)
 -   [Licenses](#licenses)
     -   [Asset Licenses](#asset-licenses)
+
+## Godot Versions
+- [Master](https://github.com/alfredbaudisch/GodotDynamicInventorySystem) branch: **Godot 4.2**.
+- For the project for Godot 3.5, use the branch [godot3](https://github.com/alfredbaudisch/GodotDynamicInventorySystem/tree/godot3).
 
 ## Project Features
 Built from scratch, inspired by the Zelda Breath of the Wild inventory system and inventory UI, this is an extensive system:
@@ -29,7 +34,6 @@ Built from scratch, inspired by the Zelda Breath of the Wild inventory system an
 -   Handling and **syncing of One Handed and Two Handed items,** while automatically unequipping items if both hands are equipped
 -  **Pickable / Pickup items, dynamically adding them to the inventory** and listing them in the inventory screen, in the correct category
 - UI sounds
-- Godot version: **Godot 3.4.3** (Godot 4 is still too unstable and susceptible for breaking changes. When Godot 4 stable release comes out, the course and this source code will be upgraded).  
 
 ## Video Course
 This source-code is built from scratch in the [**Complete Godot Course: Game User Interfaces Masterclass (Building a Dynamic Inventory System and UI with Godot)**](https://bit.ly/GodotUI). If you want to **learn how to make ALL of this from scratch**, check the course, while also support this project.

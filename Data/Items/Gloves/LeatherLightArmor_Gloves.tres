@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource( 1 )
 category_type = 4
-name = "Leather Light Armor"
+name = "Leather Light3D Armor"
 identifier = "1fae5d5d2eb50b16dbcdb272042f9993"
 texture_icon = ExtResource( 2 )
 attack_power = 0

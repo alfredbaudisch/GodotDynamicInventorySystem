@@ -1,323 +1,306 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=23 format=3 uid="uid://cew0or11r7y4a"]
 
-[ext_resource path="res://Scripts/UI/UIInventory.gd" type="Script" id=1]
-[ext_resource path="res://Assets/UI/Icons/ArrowRight.png" type="Texture" id=2]
-[ext_resource path="res://Assets/Sounds/rollover6.ogg" type="AudioStream" id=3]
-[ext_resource path="res://Assets/DefaultTheme.tres" type="Theme" id=4]
-[ext_resource path="res://Scenes/UI/Elements/UIInventoryCategory.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Assets/Fonts/DynamicFontDataRobotoCondensedItalic.tres" type="DynamicFontData" id=6]
-[ext_resource path="res://Assets/Sounds/switch_006.ogg" type="AudioStream" id=7]
-[ext_resource path="res://Scenes/UI/Elements/UIInventoryItemContextMenu.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Scenes/UI/Elements/UIItemInfo.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Scenes/UI/Elements/UICharacterItemSlots.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Assets/Sounds/switch_007.ogg" type="AudioStream" id=11]
-[ext_resource path="res://Assets/Sounds/cloth-inventory.wav" type="AudioStream" id=12]
-[ext_resource path="res://Assets/Sounds/click-less-pitch.ogg" type="AudioStream" id=13]
-[ext_resource path="res://Assets/Sounds/magnet_on_reduced.wav" type="AudioStream" id=14]
-[ext_resource path="res://Scenes/UI/Elements/GridInventoryItems.tscn" type="PackedScene" id=15]
+[ext_resource type="Script" path="res://Scripts/UI/UIInventory.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://t7mbr74o18wa" path="res://Assets/UI/Icons/ArrowRight.png" id="2"]
+[ext_resource type="AudioStream" uid="uid://b6p46r2amtlhq" path="res://Assets/Sounds/rollover6.ogg" id="3"]
+[ext_resource type="Theme" uid="uid://b8i8kalmfw4ow" path="res://Assets/DefaultTheme.tres" id="4"]
+[ext_resource type="PackedScene" uid="uid://dv01i2p2ram6s" path="res://Scenes/UI/Elements/UIInventoryCategory.tscn" id="5"]
+[ext_resource type="FontFile" path="res://Assets/Fonts/DynamicFontDataRobotoCondensedItalic.tres" id="6"]
+[ext_resource type="AudioStream" uid="uid://sstpiuw0ytpm" path="res://Assets/Sounds/switch_006.ogg" id="7"]
+[ext_resource type="PackedScene" path="res://Scenes/UI/Elements/UIInventoryItemContextMenu.tscn" id="8"]
+[ext_resource type="PackedScene" uid="uid://belgpipa3w2n4" path="res://Scenes/UI/Elements/UIItemInfo.tscn" id="9"]
+[ext_resource type="PackedScene" path="res://Scenes/UI/Elements/UICharacterItemSlots.tscn" id="10"]
+[ext_resource type="AudioStream" uid="uid://dnbcfuhkyqmhh" path="res://Assets/Sounds/switch_007.ogg" id="11"]
+[ext_resource type="AudioStream" uid="uid://bxnbv2qriekby" path="res://Assets/Sounds/cloth-inventory.wav" id="12"]
+[ext_resource type="AudioStream" uid="uid://c7wd27ogjsoo7" path="res://Assets/Sounds/click-less-pitch.ogg" id="13"]
+[ext_resource type="AudioStream" uid="uid://bldxgnw1nixkv" path="res://Assets/Sounds/magnet_on_reduced.wav" id="14"]
+[ext_resource type="PackedScene" uid="uid://cv0qumjllea1k" path="res://Scenes/UI/Elements/GridInventoryItems.tscn" id="15"]
 
-[sub_resource type="DynamicFont" id=12]
-font_data = ExtResource( 6 )
+[sub_resource type="FontFile" id="12"]
+fallbacks = Array[Font]([ExtResource("6")])
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
 
-[sub_resource type="InputEventAction" id=7]
-action = "ui_left"
+[sub_resource type="Shortcut" id="8"]
 
-[sub_resource type="ShortCut" id=8]
-shortcut = SubResource( 7 )
+[sub_resource type="Shortcut" id="10"]
 
-[sub_resource type="InputEventAction" id=9]
-action = "ui_right"
-
-[sub_resource type="ShortCut" id=10]
-shortcut = SubResource( 9 )
-
-[sub_resource type="Animation" id=11]
+[sub_resource type="Animation" id="11"]
 resource_name = "ScrollItems"
 length = 0.1
 tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath("HBoxMain/ControlItemsColumn/VBoxItemsColumn/HBoxInventoryItems/ScrollContainerItemGrids:scroll_horizontal")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1 ),
-"transitions": PoolRealArray( 2, 0.5 ),
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(2, 0.5),
 "update": 0,
-"values": [ 0, 472 ]
+"values": [0, 472]
 }
 
-[sub_resource type="Animation" id=13]
+[sub_resource type="Animation" id="13"]
 resource_name = "ScrollItemsBackwards"
 length = 0.8
 step = 0.15
 tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath("HBoxMain/ControlItemsColumn/VBoxItemsColumn/HBoxInventoryItems/ScrollContainerItemGrids:scroll_horizontal")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.75 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array(0, 0.75),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [ 472, 0 ]
+"values": [472, 0]
 }
 
-[sub_resource type="StyleBoxEmpty" id=1]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_852cg"]
+_data = {
+"ScrollItems": SubResource("11"),
+"ScrollItemsBackwards": SubResource("13")
+}
+
+[sub_resource type="StyleBoxEmpty" id="1"]
 
 [node name="UIInventory" type="Control"]
+custom_minimum_size = Vector2(1280, 560)
+layout_mode = 3
+anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -640.0
-margin_top = -280.0
-margin_right = 640.0
-margin_bottom = 280.0
-rect_min_size = Vector2( 1280, 560 )
-script = ExtResource( 1 )
-audio_stream_go_to_page = ExtResource( 14 )
-audio_stream_item_hover = ExtResource( 13 )
-audio_stream_item_pressed = ExtResource( 7 )
-audio_stream_item_equip = ExtResource( 12 )
-audio_stream_item_unequip = ExtResource( 11 )
-audio_stream_item_context_menu_cancel = ExtResource( 11 )
+offset_left = -640.0
+offset_top = -280.0
+offset_right = 640.0
+offset_bottom = 280.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+audio_stream_go_to_page = ExtResource("14")
+audio_stream_item_hover = ExtResource("13")
+audio_stream_item_pressed = ExtResource("7")
+audio_stream_item_equip = ExtResource("12")
+audio_stream_item_unequip = ExtResource("11")
+audio_stream_item_context_menu_cancel = ExtResource("11")
 
 [node name="ColorRectBackground" type="ColorRect" parent="."]
+layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color( 1, 1, 1, 0.164706 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+color = Color(1, 1, 1, 0.164706)
 
 [node name="HBoxMain" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2(1240, 480)
+layout_mode = 0
 anchor_top = 0.5
 anchor_bottom = 0.5
-margin_left = 40.0
-margin_top = -240.0
-margin_right = 1280.0
-margin_bottom = 240.0
-rect_min_size = Vector2( 1240, 480 )
+offset_left = 40.0
+offset_top = -240.0
+offset_right = 1280.0
+offset_bottom = 240.0
 
 [node name="ControlItemsColumn" type="Control" parent="HBoxMain"]
-margin_right = 560.0
-margin_bottom = 480.0
-rect_min_size = Vector2( 560, 480 )
+custom_minimum_size = Vector2(560, 480)
+layout_mode = 2
 
 [node name="VBoxItemsColumn" type="VBoxContainer" parent="HBoxMain/ControlItemsColumn"]
-margin_left = 4.0
-margin_right = 564.0
-margin_bottom = 500.0
-rect_min_size = Vector2( 558, 500 )
+custom_minimum_size = Vector2(558, 500)
+layout_mode = 0
+offset_left = 4.0
+offset_right = 564.0
+offset_bottom = 500.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-__meta__ = {
-"_edit_use_anchors_": true
-}
 
 [node name="VBoxInventoryCategories" type="VBoxContainer" parent="HBoxMain/ControlItemsColumn/VBoxItemsColumn"]
-margin_right = 560.0
-margin_bottom = 98.0
-rect_min_size = Vector2( 560, 94 )
+custom_minimum_size = Vector2(560, 94)
+layout_mode = 2
 
 [node name="ControlCategoryLabelParent" type="Control" parent="HBoxMain/ControlItemsColumn/VBoxItemsColumn/VBoxInventoryCategories"]
-margin_right = 560.0
-margin_bottom = 20.0
-rect_min_size = Vector2( 560, 20 )
+custom_minimum_size = Vector2(560, 20)
+layout_mode = 2
 
 [node name="LabelCategoryName" type="Label" parent="HBoxMain/ControlItemsColumn/VBoxItemsColumn/VBoxInventoryCategories/ControlCategoryLabelParent"]
+custom_minimum_size = Vector2(110, 19)
+layout_mode = 0
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -55.0
-margin_right = 55.0
-margin_bottom = 19.0
-rect_min_size = Vector2( 110, 19 )
-custom_fonts/font = SubResource( 12 )
+offset_left = -55.0
+offset_right = 55.0
+offset_bottom = 19.0
+theme_override_fonts/font = SubResource("12")
 text = "Bows and Arrows"
-align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
+horizontal_alignment = 1
 
 [node name="TimerCategoryName" type="Timer" parent="HBoxMain/ControlItemsColumn/VBoxItemsColumn/VBoxInventoryCategories/ControlCategoryLabelParent"]
 wait_time = 0.35
 one_shot = true
 
 [node name="CenterContainer" type="CenterContainer" parent="HBoxMain/ControlItemsColumn/VBoxItemsColumn/VBoxInventoryCategories"]
-margin_top = 24.0
-margin_right = 560.0
-margin_bottom = 98.0
-rect_min_size = Vector2( 0, 74 )
+custom_minimum_size = Vector2(560, 74)
+layout_mode = 2
 
 [node name="GridContainer" type="GridContainer" parent="HBoxMain/ControlItemsColumn/VBoxItemsColumn/VBoxInventoryCategories/CenterContainer"]
-margin_left = 35.0
-margin_right = 525.0
-margin_bottom = 74.0
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_constants/hseparation = 0
+theme_override_constants/h_separation = 0
 columns = 7
 
-[node name="UIInventoryCategory" parent="HBoxMain/ControlItemsColumn/VBoxItemsColumn/VBoxInventoryCategories/CenterContainer/GridContainer" instance=ExtResource( 5 )]
+[node name="UIInventoryCategory" parent="HBoxMain/ControlItemsColumn/VBoxItemsColumn/VBoxInventoryCategories/CenterContainer/GridContainer" instance=ExtResource("5")]
+layout_mode = 2
 
-[node name="UIInventoryCategory2" parent="HBoxMain/ControlItemsColumn/VBoxItemsColumn/VBoxInventoryCategories/CenterContainer/GridContainer" instance=ExtResource( 5 )]
-margin_left = 70.0
-margin_right = 140.0
+[node name="UIInventoryCategory2" parent="HBoxMain/ControlItemsColumn/VBoxItemsColumn/VBoxInventoryCategories/CenterContainer/GridContainer" instance=ExtResource("5")]
+layout_mode = 2
 
-[node name="UIInventoryCategory3" parent="HBoxMain/ControlItemsColumn/VBoxItemsColumn/VBoxInventoryCategories/CenterContainer/GridContainer" instance=ExtResource( 5 )]
-margin_left = 140.0
-margin_right = 210.0
+[node name="UIInventoryCategory3" parent="HBoxMain/ControlItemsColumn/VBoxItemsColumn/VBoxInventoryCategories/CenterContainer/GridContainer" instance=ExtResource("5")]
+layout_mode = 2
 
-[node name="UIInventoryCategory4" parent="HBoxMain/ControlItemsColumn/VBoxItemsColumn/VBoxInventoryCategories/CenterContainer/GridContainer" instance=ExtResource( 5 )]
-margin_left = 210.0
-margin_right = 280.0
+[node name="UIInventoryCategory4" parent="HBoxMain/ControlItemsColumn/VBoxItemsColumn/VBoxInventoryCategories/CenterContainer/GridContainer" instance=ExtResource("5")]
+layout_mode = 2
 
-[node name="UIInventoryCategory5" parent="HBoxMain/ControlItemsColumn/VBoxItemsColumn/VBoxInventoryCategories/CenterContainer/GridContainer" instance=ExtResource( 5 )]
-margin_left = 280.0
-margin_right = 350.0
+[node name="UIInventoryCategory5" parent="HBoxMain/ControlItemsColumn/VBoxItemsColumn/VBoxInventoryCategories/CenterContainer/GridContainer" instance=ExtResource("5")]
+layout_mode = 2
 
-[node name="UIInventoryCategory6" parent="HBoxMain/ControlItemsColumn/VBoxItemsColumn/VBoxInventoryCategories/CenterContainer/GridContainer" instance=ExtResource( 5 )]
-margin_left = 350.0
-margin_right = 420.0
+[node name="UIInventoryCategory6" parent="HBoxMain/ControlItemsColumn/VBoxItemsColumn/VBoxInventoryCategories/CenterContainer/GridContainer" instance=ExtResource("5")]
+layout_mode = 2
 
-[node name="UIInventoryCategory7" parent="HBoxMain/ControlItemsColumn/VBoxItemsColumn/VBoxInventoryCategories/CenterContainer/GridContainer" instance=ExtResource( 5 )]
-margin_left = 420.0
-margin_right = 490.0
+[node name="UIInventoryCategory7" parent="HBoxMain/ControlItemsColumn/VBoxItemsColumn/VBoxInventoryCategories/CenterContainer/GridContainer" instance=ExtResource("5")]
+layout_mode = 2
 
 [node name="HBoxInventoryItems" type="HBoxContainer" parent="HBoxMain/ControlItemsColumn/VBoxItemsColumn"]
-margin_top = 102.0
-margin_right = 560.0
-margin_bottom = 490.0
-rect_min_size = Vector2( 0, 388 )
+custom_minimum_size = Vector2(0, 388)
+layout_mode = 2
 
 [node name="ControlLeftColumn" type="Control" parent="HBoxMain/ControlItemsColumn/VBoxItemsColumn/HBoxInventoryItems"]
-margin_right = 42.0
-margin_bottom = 364.0
-rect_min_size = Vector2( 42, 364 )
+custom_minimum_size = Vector2(42, 364)
+layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 
 [node name="ButtonLeft" type="TextureButton" parent="HBoxMain/ControlItemsColumn/VBoxItemsColumn/HBoxInventoryItems/ControlLeftColumn"]
+custom_minimum_size = Vector2(42, 60)
+layout_mode = 0
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -21.0
-margin_top = -30.0
-margin_right = 21.0
-margin_bottom = 30.0
-rect_min_size = Vector2( 42, 60 )
-shortcut_in_tooltip = false
+offset_left = -21.0
+offset_top = -30.0
+offset_right = 21.0
+offset_bottom = 30.0
 action_mode = 0
-shortcut = SubResource( 8 )
-texture_normal = ExtResource( 2 )
-expand = true
+shortcut = SubResource("8")
+shortcut_in_tooltip = false
+texture_normal = ExtResource("2")
+ignore_texture_size = true
+stretch_mode = 0
 flip_h = true
 
 [node name="ScrollContainerItemGrids" type="ScrollContainer" parent="HBoxMain/ControlItemsColumn/VBoxItemsColumn/HBoxInventoryItems"]
 show_behind_parent = true
-margin_left = 46.0
-margin_right = 514.0
-margin_bottom = 388.0
-rect_min_size = Vector2( 468, 372 )
-theme = ExtResource( 4 )
-scroll_vertical_enabled = false
+custom_minimum_size = Vector2(468, 372)
+layout_mode = 2
+theme = ExtResource("4")
 
 [node name="HBoxItemGridsContainer" type="HBoxContainer" parent="HBoxMain/ControlItemsColumn/VBoxItemsColumn/HBoxInventoryItems/ScrollContainerItemGrids"]
-margin_right = 468.0
-margin_bottom = 372.0
-rect_min_size = Vector2( 468, 372 )
+custom_minimum_size = Vector2(468, 372)
+layout_mode = 2
 
-[node name="GridInventoryItems" parent="HBoxMain/ControlItemsColumn/VBoxItemsColumn/HBoxInventoryItems/ScrollContainerItemGrids/HBoxItemGridsContainer" instance=ExtResource( 15 )]
+[node name="GridInventoryItems" parent="HBoxMain/ControlItemsColumn/VBoxItemsColumn/HBoxInventoryItems/ScrollContainerItemGrids/HBoxItemGridsContainer" instance=ExtResource("15")]
+layout_mode = 2
 
 [node name="ControlRightColumn" type="Control" parent="HBoxMain/ControlItemsColumn/VBoxItemsColumn/HBoxInventoryItems"]
-margin_left = 518.0
-margin_right = 560.0
-margin_bottom = 364.0
-rect_min_size = Vector2( 42, 364 )
+custom_minimum_size = Vector2(42, 364)
+layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 
 [node name="ButtonRight" type="TextureButton" parent="HBoxMain/ControlItemsColumn/VBoxItemsColumn/HBoxInventoryItems/ControlRightColumn"]
+custom_minimum_size = Vector2(42, 60)
+layout_mode = 0
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -21.0
-margin_top = -30.0
-margin_right = 21.0
-margin_bottom = 30.0
-rect_min_size = Vector2( 42, 60 )
-shortcut_in_tooltip = false
+offset_left = -21.0
+offset_top = -30.0
+offset_right = 21.0
+offset_bottom = 30.0
 action_mode = 0
-shortcut = SubResource( 10 )
-texture_normal = ExtResource( 2 )
-expand = true
+shortcut = SubResource("10")
+shortcut_in_tooltip = false
+texture_normal = ExtResource("2")
+ignore_texture_size = true
+stretch_mode = 0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="HBoxMain/ControlItemsColumn/VBoxItemsColumn/HBoxInventoryItems"]
 root_node = NodePath("../../../../..")
-anims/ScrollItems = SubResource( 11 )
-anims/ScrollItemsBackwards = SubResource( 13 )
-
-[node name="VSeparator" type="VSeparator" parent="HBoxMain"]
-margin_left = 564.0
-margin_right = 584.0
-margin_bottom = 480.0
-custom_constants/separation = 20
-custom_styles/separator = SubResource( 1 )
-
-[node name="ControlInfoColumn" type="Control" parent="HBoxMain"]
-margin_left = 588.0
-margin_right = 1188.0
-margin_bottom = 480.0
-rect_min_size = Vector2( 600, 480 )
-__meta__ = {
-"_edit_use_anchors_": false
+libraries = {
+"": SubResource("AnimationLibrary_852cg")
 }
 
+[node name="VSeparator" type="VSeparator" parent="HBoxMain"]
+layout_mode = 2
+theme_override_constants/separation = 20
+theme_override_styles/separator = SubResource("1")
+
+[node name="ControlInfoColumn" type="Control" parent="HBoxMain"]
+custom_minimum_size = Vector2(600, 480)
+layout_mode = 2
+
 [node name="VBoxInfoColumn" type="VBoxContainer" parent="HBoxMain/ControlInfoColumn"]
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
-rect_min_size = Vector2( 600, 0 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="UIItemInfo" parent="HBoxMain/ControlInfoColumn" instance=ExtResource( 9 )]
+[node name="UIItemInfo" parent="HBoxMain/ControlInfoColumn" instance=ExtResource("9")]
+layout_mode = 1
 
-[node name="UICharacterItemSlots" parent="HBoxMain/ControlInfoColumn" instance=ExtResource( 10 )]
+[node name="UICharacterItemSlots" parent="HBoxMain/ControlInfoColumn" instance=ExtResource("10")]
+anchors_preset = 0
 anchor_left = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.0
-margin_left = -137.0
-margin_right = 137.0
-margin_bottom = 274.0
+offset_left = -137.0
+offset_right = 137.0
+offset_bottom = 274.0
 
 [node name="UIContextMenuContainer" type="Control" parent="."]
 visible = false
+anchors_preset = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="UIContextMenu" parent="UIContextMenuContainer" instance=ExtResource( 8 )]
+[node name="UIContextMenu" parent="UIContextMenuContainer" instance=ExtResource("8")]
+anchors_preset = 0
 anchor_left = 0.0
 anchor_right = 0.0
-margin_left = 0.0
-margin_right = 240.0
+offset_left = 0.0
+offset_right = 240.0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="UIContextMenuContainer"]
-stream = ExtResource( 3 )
+stream = ExtResource("3")
 volume_db = -10.0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 3 )
+stream = ExtResource("3")
 volume_db = -10.0
 
 [connection signal="draw" from="." to="." method="_on_UIInventory_draw"]
-[connection signal="hide" from="." to="." method="_on_UIInventory_hide"]
+[connection signal="hidden" from="." to="." method="_on_UIInventory_hide"]
 [connection signal="timeout" from="HBoxMain/ControlItemsColumn/VBoxItemsColumn/VBoxInventoryCategories/ControlCategoryLabelParent/TimerCategoryName" to="." method="_on_TimerCategoryName_timeout"]
 [connection signal="pressed" from="HBoxMain/ControlItemsColumn/VBoxItemsColumn/HBoxInventoryItems/ControlLeftColumn/ButtonLeft" to="." method="_on_ButtonLeft_pressed"]
 [connection signal="pressed" from="HBoxMain/ControlItemsColumn/VBoxItemsColumn/HBoxInventoryItems/ControlRightColumn/ButtonRight" to="." method="_on_ButtonRight_pressed"]

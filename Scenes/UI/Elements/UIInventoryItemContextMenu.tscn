@@ -9,10 +9,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -120.0
-margin_top = -60.0
-margin_right = 120.0
-margin_bottom = 60.0
+offset_left = -120.0
+offset_top = -60.0
+offset_right = 120.0
+offset_bottom = 60.0
 theme = ExtResource( 1 )
 script = ExtResource( 3 )
 
@@ -23,25 +23,25 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -100.0
-margin_top = -39.0
-margin_right = 100.0
-margin_bottom = 39.0
-custom_constants/separation = 8
+offset_left = -100.0
+offset_top = -39.0
+offset_right = 100.0
+offset_bottom = 39.0
+theme_override_constants/separation = 8
 
 [node name="ButtonEquip" type="Button" parent="VBoxButtons"]
-margin_right = 200.0
-margin_bottom = 35.0
+offset_right = 200.0
+offset_bottom = 35.0
 focus_mode = 0
 size_flags_horizontal = 3
-enabled_focus_mode = 0
+focus_mode = 0
 text = "Equip"
 
 [node name="ButtonCancel" type="Button" parent="VBoxButtons"]
-margin_top = 43.0
-margin_right = 200.0
-margin_bottom = 78.0
+offset_top = 43.0
+offset_right = 200.0
+offset_bottom = 78.0
 focus_mode = 0
 size_flags_horizontal = 3
-enabled_focus_mode = 0
+focus_mode = 0
 text = "Cancel"

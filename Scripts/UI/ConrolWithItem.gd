@@ -1,7 +1,7 @@
 extends Control
 class_name ControlWithItem
 
-var item : EntityItem setget set_item,get_item
+var item : EntityItem: get = get_item, set = set_item
 
 
 func set_item(value : EntityItem) -> void:

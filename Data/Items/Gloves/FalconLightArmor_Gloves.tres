@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource( 1 )
 category_type = 4
-name = "Falcon Light Armor"
+name = "Falcon Light3D Armor"
 identifier = "29e778d6bc056b9367eac03c2b5134c9"
 texture_icon = ExtResource( 2 )
 attack_power = 0

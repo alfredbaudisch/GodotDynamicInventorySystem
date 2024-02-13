@@ -5,8 +5,8 @@ const ItemCategoryDisplaysPath = "res://Data/ItemCategoryDisplays"
 const SaveFileName = "user://SavedEntityPlayer.tres"
 
 var state : int = Types.GameStates.Active
-var player_data : EntityPlayer setget ,get_player_data
-var item_category_displays : Array = [] setget ,get_item_category_displays
+var player_data : EntityPlayer: get = get_player_data
+var item_category_displays : Array = []: get = get_item_category_displays
 
 
 # You can define multiple player presets
@@ -46,7 +46,7 @@ func load_game() -> bool:
 		
 		
 func save_game() -> bool:
-	var res = ResourceSaver.save(SaveFileName, player_data)
+	var res = ResourceSaver.save(player_data, SaveFileName)
 	
 	if res != OK:
 		printerr("Could not save game. Error: ", res)

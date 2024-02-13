@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource( 1 )
 category_type = 2
-name = "Chainmail Light Armor"
+name = "Chainmail Light3D Armor"
 identifier = "12cdedc683234232dbc0062b325d81a8"
 texture_icon = ExtResource( 2 )
 attack_power = 0

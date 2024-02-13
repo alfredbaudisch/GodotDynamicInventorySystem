@@ -1,9 +1,9 @@
 extends ControlWithItem
 
-onready var _button_equip : Button = $VBoxButtons/ButtonEquip setget ,get_button_equip
-onready var _button_cancel : Button = $VBoxButtons/ButtonCancel setget ,get_button_cancel
+@onready var _button_equip : Button = $VBoxButtons/ButtonEquip: get = get_button_equip
+@onready var _button_cancel : Button = $VBoxButtons/ButtonCancel: get = get_button_cancel
 
-var ui_inventory_item : Control setget set_ui_inventory_item,get_ui_inventory_item
+var ui_inventory_item : Control: get = get_ui_inventory_item, set = set_ui_inventory_item
 
 
 func get_button_equip() -> Button:

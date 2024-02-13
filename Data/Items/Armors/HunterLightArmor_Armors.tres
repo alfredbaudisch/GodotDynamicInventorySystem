@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource( 1 )
 category_type = 0
-name = "Hunter Light Armor"
+name = "Hunter Light3D Armor"
 identifier = "65deddafd9804eb9c5d4751425c8870f"
 texture_icon = ExtResource( 2 )
 attack_power = 0

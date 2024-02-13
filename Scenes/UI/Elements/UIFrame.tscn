@@ -8,10 +8,10 @@ color = Color( 0, 0, 0, 0.556863 )
 [node name="ColorRect2" type="ColorRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 1.0
-margin_top = 1.0
-margin_right = -1.0
-margin_bottom = -1.0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = -1.0
+offset_bottom = -1.0
 color = Color( 1, 1, 1, 0.443137 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -20,10 +20,10 @@ __meta__ = {
 [node name="ColorRect3" type="ColorRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 2.0
-margin_top = 2.0
-margin_right = -2.0
-margin_bottom = -2.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
 color = Color( 0, 0, 0, 0.670588 )
 __meta__ = {
 "_edit_use_anchors_": false

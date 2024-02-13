@@ -1,10 +1,10 @@
 extends Node2D
 
-onready var _ui_inventory_screen := $UI/UIInventoryScreen
-onready var _ui_audio_player := $UI/AudioStreamPlayer
+@onready var _ui_inventory_screen := $UI/UIInventoryScreen
+@onready var _ui_audio_player := $UI/AudioStreamPlayer
 
-export(AudioStream) var audio_stream_open_inventory
-export(AudioStream) var audio_stream_close_inventory
+@export var audio_stream_open_inventory: AudioStream
+@export var audio_stream_close_inventory: AudioStream
 
 
 func _ready() -> void:	

@@ -4,10 +4,10 @@ class_name FileUtils
 
 static func get_dir_names_from_path(path) -> Array:
 	var contents = []	
-	var dir = Directory.new()
+	var dir = DirAccess.open(path)
 	
-	if dir.open(path) == OK:
-		dir.list_dir_begin()
+	if dir:
+		dir.list_dir_begin() # TODOConverter3To4 fill missing arguments https://github.com/godotengine/godot/pull/40547
 		
 		var file_name = dir.get_next()		
 		while file_name != "":			
@@ -23,10 +23,10 @@ static func get_dir_names_from_path(path) -> Array:
 
 static func get_file_names_from_path(path, extension := "all") -> Array:
 	var contents = []	
-	var dir = Directory.new()
+	var dir = DirAccess.open(path)
 	
-	if dir.open(path) == OK:
-		dir.list_dir_begin()
+	if dir:
+		dir.list_dir_begin() # TODOConverter3To4 fill missing arguments https://github.com/godotengine/godot/pull/40547
 		
 		var file_name = dir.get_next()		
 		while file_name != "":			

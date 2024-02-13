@@ -1,6 +1,6 @@
 extends Control
 
-onready var _ui_inventory_item := $HBoxContainer/UIInventoryItem
+@onready var _ui_inventory_item := $HBoxContainer/UIInventoryItem
 
 
 func get_ui_inventory_item() -> Node:
