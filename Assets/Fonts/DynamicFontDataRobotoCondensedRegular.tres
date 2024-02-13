@@ -1,4 +1,4 @@
-[gd_resource type="DynamicFontData" format=2]
+[gd_resource type="FontFile" format=2]
 
 [resource]
 font_path = "res://Assets/Fonts/RobotoCondensed-Regular.ttf"

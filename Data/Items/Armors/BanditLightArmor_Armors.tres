@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource( 1 )
 category_type = 0
-name = "Bandit Light Armor"
+name = "Bandit Light3D Armor"
 identifier = "c42460abef3b0c553805eab0a969fb87"
 texture_icon = ExtResource( 2 )
 attack_power = 0

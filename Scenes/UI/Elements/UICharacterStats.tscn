@@ -1,39 +1,29 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=3 format=3 uid="uid://deyph180b36uh"]
 
-[ext_resource path="res://Assets/DefaultTheme.tres" type="Theme" id=1]
-[ext_resource path="res://Scripts/UI/UICharacterStats.gd" type="Script" id=2]
+[ext_resource type="Theme" uid="uid://b8i8kalmfw4ow" path="res://Assets/DefaultTheme.tres" id="1"]
+[ext_resource type="Script" path="res://Scripts/UI/UICharacterStats.gd" id="2"]
 
 [node name="UICharacterStats" type="Control"]
-rect_min_size = Vector2( 300, 32 )
-theme = ExtResource( 1 )
-script = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+custom_minimum_size = Vector2(300, 32)
+layout_mode = 3
+anchors_preset = 0
+theme = ExtResource("1")
+script = ExtResource("2")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-margin_right = 280.0
-margin_bottom = 31.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+layout_mode = 0
+offset_right = 280.0
+offset_bottom = 31.0
 
 [node name="LabelLevel" type="Label" parent="VBoxContainer"]
-margin_right = 280.0
-margin_bottom = 19.0
+layout_mode = 2
 text = "Level 45"
 
 [node name="ProgressBarExp" type="ProgressBar" parent="VBoxContainer"]
-margin_top = 23.0
-margin_right = 280.0
-margin_bottom = 31.0
-rect_min_size = Vector2( 280, 8 )
+custom_minimum_size = Vector2(280, 8)
+layout_mode = 2
 max_value = 1.0
 step = 0.05
 value = 0.6
-percent_visible = false
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [connection signal="draw" from="." to="." method="_on_UICharacterStats_draw"]

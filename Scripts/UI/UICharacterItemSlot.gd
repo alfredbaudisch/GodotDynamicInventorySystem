@@ -1,16 +1,16 @@
 extends ControlWithItem
 
-export(Array, Types.ItemCategoryTypes) var item_category_type = []
+@export var item_category_type : Array[Types.ItemCategoryTypes] = []
 
-onready var _texture_background := $UIFrame/TextureRect
+@onready var _texture_background := $UIFrame/TextureRect
 
 var _texture_background_normal := preload("res://Assets/UI/ButtonBackgrounds/Highlight-Normal.png")
 var _texture_background_equipped := preload("res://Assets/UI/ButtonBackgrounds/Highlight-Equipped.png")
 
 
 func _ready() -> void:
-	Events.connect("on_item_equipped", self, "_on_item_equipped")
-	Events.connect("on_item_unequipped", self, "_on_item_unequipped")
+	Events.on_item_equipped.connect(_on_item_equipped)
+	Events.on_item_unequipped.connect(_on_item_unequipped)
 	
 	for category_type in item_category_type:
 		var equipped_item = GameState.get_player_data().get_equipped_item_for_category_type(category_type)
@@ -26,12 +26,12 @@ func _ready() -> void:
 
 
 func set_item(value : EntityItem) -> void:
-	.set_item(value)
+	super.set_item(value)
 	_sync_item_equipped()
 
 
 func _sync_item_equipped() -> void:
-	var texture : Texture
+	var texture : Texture2D
 	
 	if item and GameState.player_check_is_item_equipped(item):
 		texture = _texture_background_equipped

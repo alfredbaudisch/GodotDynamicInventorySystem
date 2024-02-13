@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/magnet_on_reduced.wav-5939ceb947bd728482c7a7292276d3e5.sample"
+type="AudioStreamWAV"
+uid="uid://bldxgnw1nixkv"
+path="res://.godot/imported/magnet_on_reduced.wav-5939ceb947bd728482c7a7292276d3e5.sample"
 
 [deps]
 
 source_file="res://Assets/Sounds/magnet_on_reduced.wav"
-dest_files=[ "res://.import/magnet_on_reduced.wav-5939ceb947bd728482c7a7292276d3e5.sample" ]
+dest_files=["res://.godot/imported/magnet_on_reduced.wav-5939ceb947bd728482c7a7292276d3e5.sample"]
 
 [params]
 
@@ -17,5 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=false
 edit/normalize=false
-edit/loop=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
 compress/mode=0

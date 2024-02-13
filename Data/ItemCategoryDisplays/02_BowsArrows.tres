@@ -1,10 +1,10 @@
-[gd_resource type="Resource" load_steps=3 format=2]
+[gd_resource type="Resource" script_class="EntityItemCategoryDisplay" load_steps=3 format=3 uid="uid://0i3kbbv5i2t3"]
 
-[ext_resource path="res://Scripts/Data/Entities/EntityItemCategoryDisplay.gd" type="Script" id=1]
-[ext_resource path="res://Assets/UI/Icons/ItemCategories/Bows.png" type="Texture" id=2]
+[ext_resource type="Script" path="res://Scripts/Data/Entities/EntityItemCategoryDisplay.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://bb4ysvbaris3y" path="res://Assets/UI/Icons/ItemCategories/Bows.png" id="2"]
 
 [resource]
-script = ExtResource( 1 )
+script = ExtResource("1")
 display_name = "Bows and Arrows"
-types = [ 3, 1 ]
-texture_icon = ExtResource( 2 )
+types = Array[int]([3, 1])
+texture_icon = ExtResource("2")

@@ -1,6 +1,6 @@
-extends KinematicBody2D
+extends CharacterBody2D
 
-export (int) var speed = 200
+@export var speed : int = 200
 
 var _velocity := Vector2()
 
@@ -10,7 +10,9 @@ func _physics_process(delta : float) -> void:
 		return
 		
 	_get_input()
-	_velocity = move_and_slide(_velocity)
+	set_velocity(_velocity)
+	move_and_slide()
+	_velocity = velocity
 
 	
 func _get_input() -> void:

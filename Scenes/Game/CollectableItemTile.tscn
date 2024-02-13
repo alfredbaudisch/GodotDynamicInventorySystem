@@ -1,21 +1,22 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=5 format=3 uid="uid://bl53xr14t4s"]
 
-[ext_resource path="res://Assets/Tiles/colored_tilemap_packed.png" type="Texture" id=1]
-[ext_resource path="res://Scripts/Game/CollectableItemTile.gd" type="Script" id=2]
+[ext_resource type="Texture2D" uid="uid://dciqg0wlqwrle" path="res://Assets/Tiles/colored_tilemap_packed.png" id="1"]
+[ext_resource type="Script" path="res://Scripts/Game/CollectableItemTile.gd" id="2"]
 
-[sub_resource type="AtlasTexture" id=4]
-atlas = ExtResource( 1 )
-region = Rect2( 48, 32, 8, 8 )
+[sub_resource type="AtlasTexture" id="4"]
+atlas = ExtResource("1")
+region = Rect2(48, 32, 8, 8)
 
-[sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 4, 4 )
+[sub_resource type="RectangleShape2D" id="5"]
+size = Vector2(8, 8)
 
 [node name="CollectableItemTile" type="Area2D" groups=["Items"]]
-scale = Vector2( 5, 5 )
-script = ExtResource( 2 )
+scale = Vector2(5, 5)
+script = ExtResource("2")
 
-[node name="Sprite" type="Sprite" parent="."]
-texture = SubResource( 4 )
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = SubResource("4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 5 )
+shape = SubResource("5")

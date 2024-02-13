@@ -32,7 +32,7 @@ func _ready() -> void:
 #			var sword = load("res://Mockups/TestSwordItem.tres")
 #			data.items.append(sword)
 			
-			ResourceSaver.save("user://godot_test_inventory.tres", data)
+			ResourceSaver.save(data, "user://godot_test_inventory.tres")
 			
 			for i in data.items:
 				print(i.price)
@@ -43,7 +43,7 @@ func _ready() -> void:
 		data = load("res://Mockups/PreloadTestInventory.tres")
 	
 		if data is MockedPersistedUserInventory:
-			ResourceSaver.save("user://godot_test_inventory.tres", data)
+			ResourceSaver.save(data, "user://godot_test_inventory.tres")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

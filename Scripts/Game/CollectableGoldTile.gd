@@ -1,3 +1,3 @@
 extends CollectableItemTile
 
-export(int) var amount = 0
+@export var amount: int = 0

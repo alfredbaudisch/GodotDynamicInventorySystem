@@ -5,12 +5,12 @@ static func get_name_from_sprite_file_name(file_name : String) -> String:
 	var regex = RegEx.new()
 	regex.compile("[A-Z]{1}[a-z]*") # Ex: WoodenMace, OldPoleaxe
 	
-	var results : PoolStringArray = []
+	var results : PackedStringArray = []
 	for result in regex.search_all(file_name):
 		results.push_back(result.get_string())
 		
-	if not results.empty():
-		return results.join(" ")
+	if not results.is_empty():
+		return " ".join(results)
 	else:
 		return file_name
 	
@@ -85,10 +85,10 @@ static func create_item_resources() -> void:
 static func sanitize_sprite_names(path) -> void:
 	return # already executed
 	
-	var dir = Directory.new()
+	var dir = DirAccess.open(path)
 
-	if dir.open(path) == OK:
-		dir.list_dir_begin()
+	if dir:
+		dir.list_dir_begin() # TODOConverter3To4 fill missing arguments https://github.com/godotengine/godot/pull/40547
 
 		var file_name = dir.get_next()		
 		while file_name != "":			

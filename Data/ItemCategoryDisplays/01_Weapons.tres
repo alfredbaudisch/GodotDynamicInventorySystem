@@ -1,10 +1,10 @@
-[gd_resource type="Resource" load_steps=3 format=2]
+[gd_resource type="Resource" script_class="EntityItemCategoryDisplay" load_steps=3 format=3 uid="uid://ck6oaighp1ase"]
 
-[ext_resource path="res://Scripts/Data/Entities/EntityItemCategoryDisplay.gd" type="Script" id=1]
-[ext_resource path="res://Assets/UI/Icons/ItemCategories/Weapons.png" type="Texture" id=2]
+[ext_resource type="Script" path="res://Scripts/Data/Entities/EntityItemCategoryDisplay.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://dlf3co36ydc7r" path="res://Assets/UI/Icons/ItemCategories/Weapons.png" id="2"]
 
 [resource]
-script = ExtResource( 1 )
+script = ExtResource("1")
 display_name = "Weapons"
-types = [ 7, 8 ]
-texture_icon = ExtResource( 2 )
+types = Array[int]([7, 8])
+texture_icon = ExtResource("2")

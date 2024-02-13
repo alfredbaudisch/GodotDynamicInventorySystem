@@ -6,9 +6,9 @@
 [sub_resource type="StyleBoxEmpty" id=3]
 
 [node name="UIInventoryGridItem" type="Control"]
-margin_right = 82.0
-margin_bottom = 82.0
-rect_min_size = Vector2( 86, 82 )
+offset_right = 82.0
+offset_bottom = 82.0
+custom_minimum_size = Vector2( 86, 82 )
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -17,17 +17,17 @@ __meta__ = {
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_constants/separation = 0
+theme_override_constants/separation = 0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="VSeparator" type="VSeparator" parent="HBoxContainer"]
-margin_right = 4.0
-margin_bottom = 82.0
-custom_constants/separation = 4
-custom_styles/separator = SubResource( 3 )
+offset_right = 4.0
+offset_bottom = 82.0
+theme_override_constants/separation = 4
+theme_override_styles/separator = SubResource( 3 )
 
 [node name="UIInventoryItem" parent="HBoxContainer" instance=ExtResource( 1 )]
-margin_left = 4.0
-margin_right = 86.0
+offset_left = 4.0
+offset_right = 86.0

@@ -5,24 +5,24 @@ const PagePadding = 0
 const ItemsPerGrid = 20
 const MaxAmountCategories = 7
 
-export(AudioStream) var audio_stream_go_to_page
-export(AudioStream) var audio_stream_item_hover
-export(AudioStream) var audio_stream_item_pressed
-export(AudioStream) var audio_stream_item_equip
-export(AudioStream) var audio_stream_item_unequip
-export(AudioStream) var audio_stream_item_context_menu_cancel
-onready var _audio_player := $AudioStreamPlayer
-onready var _audio_player_context_menu := $UIContextMenuContainer/AudioStreamPlayer
+@export var audio_stream_go_to_page: AudioStream
+@export var audio_stream_item_hover: AudioStream
+@export var audio_stream_item_pressed: AudioStream
+@export var audio_stream_item_equip: AudioStream
+@export var audio_stream_item_unequip: AudioStream
+@export var audio_stream_item_context_menu_cancel: AudioStream
+@onready var _audio_player := $AudioStreamPlayer
+@onready var _audio_player_context_menu := $UIContextMenuContainer/AudioStreamPlayer
 
 var _just_loaded := true
 
 #
 # Category members
 #
-onready var _grid_categories := $HBoxMain/ControlItemsColumn/VBoxItemsColumn/VBoxInventoryCategories/CenterContainer/GridContainer
-onready var _control_category_label_parent := $HBoxMain/ControlItemsColumn/VBoxItemsColumn/VBoxInventoryCategories/ControlCategoryLabelParent
-onready var _label_category_name : Label = $HBoxMain/ControlItemsColumn/VBoxItemsColumn/VBoxInventoryCategories/ControlCategoryLabelParent/LabelCategoryName
-onready var _timer_category_name : Timer = $HBoxMain/ControlItemsColumn/VBoxItemsColumn/VBoxInventoryCategories/ControlCategoryLabelParent/TimerCategoryName
+@onready var _grid_categories := $HBoxMain/ControlItemsColumn/VBoxItemsColumn/VBoxInventoryCategories/CenterContainer/GridContainer
+@onready var _control_category_label_parent := $HBoxMain/ControlItemsColumn/VBoxItemsColumn/VBoxInventoryCategories/ControlCategoryLabelParent
+@onready var _label_category_name : Label = $HBoxMain/ControlItemsColumn/VBoxItemsColumn/VBoxInventoryCategories/ControlCategoryLabelParent/LabelCategoryName
+@onready var _timer_category_name : Timer = $HBoxMain/ControlItemsColumn/VBoxItemsColumn/VBoxInventoryCategories/ControlCategoryLabelParent/TimerCategoryName
 
 var _ui_inventory_category := preload("res://Scenes/UI/Elements/UIInventoryCategory.tscn")
 
@@ -35,14 +35,14 @@ var _last_active_category_display : EntityItemCategoryDisplay
 #
 # Item members
 #
-onready var _animation_player : AnimationPlayer = $HBoxMain/ControlItemsColumn/VBoxItemsColumn/HBoxInventoryItems/AnimationPlayer
-onready var _scroll_container := $HBoxMain/ControlItemsColumn/VBoxItemsColumn/HBoxInventoryItems/ScrollContainerItemGrids
-onready var _item_grids_container := $HBoxMain/ControlItemsColumn/VBoxItemsColumn/HBoxInventoryItems/ScrollContainerItemGrids/HBoxItemGridsContainer
-onready var _button_left := $HBoxMain/ControlItemsColumn/VBoxItemsColumn/HBoxInventoryItems/ControlLeftColumn/ButtonLeft
-onready var _button_right := $HBoxMain/ControlItemsColumn/VBoxItemsColumn/HBoxInventoryItems/ControlRightColumn/ButtonRight
-onready var _context_menu_container := $UIContextMenuContainer
-onready var _context_menu := $UIContextMenuContainer/UIContextMenu
-onready var _ui_item_info := $HBoxMain/ControlInfoColumn/UIItemInfo
+@onready var _animation_player : AnimationPlayer = $HBoxMain/ControlItemsColumn/VBoxItemsColumn/HBoxInventoryItems/AnimationPlayer
+@onready var _scroll_container := $HBoxMain/ControlItemsColumn/VBoxItemsColumn/HBoxInventoryItems/ScrollContainerItemGrids
+@onready var _item_grids_container := $HBoxMain/ControlItemsColumn/VBoxItemsColumn/HBoxInventoryItems/ScrollContainerItemGrids/HBoxItemGridsContainer
+@onready var _button_left := $HBoxMain/ControlItemsColumn/VBoxItemsColumn/HBoxInventoryItems/ControlLeftColumn/ButtonLeft
+@onready var _button_right := $HBoxMain/ControlItemsColumn/VBoxItemsColumn/HBoxInventoryItems/ControlRightColumn/ButtonRight
+@onready var _context_menu_container := $UIContextMenuContainer
+@onready var _context_menu := $UIContextMenuContainer/UIContextMenu
+@onready var _ui_item_info := $HBoxMain/ControlInfoColumn/UIItemInfo
 
 var _grid_template := preload("res://Scenes/UI/Elements/GridInventoryItems.tscn")
 var _ui_inventory_grid_item := preload("res://Scenes/UI/Elements/UIInventoryGridItem.tscn")
@@ -59,7 +59,7 @@ var _scrolling_to_page := 1
 
 
 func _ready() -> void:	
-	Events.connect("on_item_acquired", self, "_on_item_acquired")
+	Events.on_item_acquired.connect(_on_item_acquired)
 	
 	_reload()
 
@@ -68,7 +68,7 @@ func _reload() -> void:
 	_context_menu_container.set_visible(false)
 	
 	_reload_items()
-	yield(get_tree(), "idle_frame")
+	await get_tree().process_frame
 	
 	var should_go_to_page := 0
 	
@@ -84,7 +84,7 @@ func _reload() -> void:
 	if should_go_to_page <= 1:
 		_update_navigation()
 		
-	yield(get_tree(), "idle_frame")
+	await get_tree().process_frame
 
 	if _just_loaded:
 		_setup_context_menu()
@@ -103,7 +103,7 @@ func _reload_categories() -> void:
 	
 	# Dynamically load and place the category buttons	
 	for category_display in GameState.get_item_category_displays():
-		var ui = _ui_inventory_category.instance()
+		var ui = _ui_inventory_category.instantiate()
 		ui.set_name(category_display.display_name)
 		_grid_categories.add_child(ui)
 		
@@ -113,19 +113,17 @@ func _reload_categories() -> void:
 		if GameState.count_inventory_items_from_category_display(category_display) > 0:
 			# It has to be done here, after add_child,
 			# because then the node is ready
-			var button = ui.get_button()
-			button.connect("mouse_entered", self, "_on_button_category_mouse_entered", [ui])
-			button.connect("mouse_exited", self, "_on_button_category_mouse_exited", [ui])
-			button.connect("pressed", self, "_on_button_category_pressed", [
-				ui, _category_displays_to_pages.get(category_display)
-			])
+			var button = ui.get_button()			
+			button.mouse_entered.connect(_on_button_category_mouse_entered.bind(ui))
+			button.mouse_exited.connect(_on_button_category_mouse_exited.bind(ui))
+			button.pressed.connect(_on_button_category_pressed.bind(ui, _category_displays_to_pages.get(category_display)))
 		
 		ui.set_category(category_display)
 		_category_displays_to_ui[category_display] = ui
 
 
 func _set_active_category_display() -> void:
-	if _pages_to_category_displays.empty():
+	if _pages_to_category_displays.is_empty():
 		_label_category_name.set_visible(false)
 		return
 	
@@ -157,7 +155,7 @@ func _show_category_display_label(ui_inventory_category : Node = null) -> void:
 	
 	# We have to wait for a frame, otherwise button.get_global_position()
 	# would still return the local position instead of global position
-	yield(get_tree(), "idle_frame")
+	await get_tree().process_frame
 	
 	var icon_center_global_x = button.get_global_position().x + button.get_rect().size.x / 2		
 	var label_half_width = _label_category_name.get_rect().size.x / 2
@@ -236,7 +234,7 @@ func _reload_items() -> void:
 					# it means it's time to create a new grid to place this item/a new page
 					if not grid or (grid and ((category_display_amount_items - 1) % ItemsPerGrid == 0)):
 						pages += 1						
-						grid = _grid_template.instance()
+						grid = _grid_template.instantiate()
 						
 						for child in grid.get_children():
 							grid.remove_child(child)
@@ -244,7 +242,7 @@ func _reload_items() -> void:
 						grid.set_name(category_display.display_name)
 						_item_grids_container.add_child(grid)
 						
-					var ui_grid_item = _ui_inventory_grid_item.instance()
+					var ui_grid_item = _ui_inventory_grid_item.instantiate()
 					ui_grid_item.set_name(item.name + "-" + item.identifier)
 					grid.add_child(ui_grid_item)				
 					
@@ -252,9 +250,9 @@ func _reload_items() -> void:
 					ui_inventory_item.set_item(item)
 					
 					var button = ui_inventory_item.get_button()
-					button.connect("mouse_entered", self, "_on_button_item_mouse_entered", [ui_inventory_item])
-					button.connect("mouse_exited", self, "_on_button_item_mouse_exited", [ui_inventory_item])
-					button.connect("pressed", self, "_on_button_item_mouse_pressed", [ui_inventory_item])
+					button.mouse_entered.connect(_on_button_item_mouse_entered.bind(ui_inventory_item))
+					button.mouse_exited.connect(_on_button_item_mouse_exited.bind(ui_inventory_item))
+					button.pressed.connect(_on_button_item_mouse_pressed.bind(ui_inventory_item))
 	
 			# Before moving to another CategoryDisplay, assign the
 			# starting page for the current CategoryDisplay
@@ -270,7 +268,7 @@ func _reload_items() -> void:
 	# HACK: This is needed so the container can have
 	# its size updated after the children grids were added dynamically
 	_item_grids_container.set_visible(false)
-	yield(get_tree(), "idle_frame")
+	await get_tree().process_frame
 	_item_grids_container.set_visible(true)
 	
 	# Scrolling setup
@@ -399,11 +397,11 @@ func _setup_context_menu() -> void:
 	var middle_idx = int(ceil(_grid_categories.get_child_count() / 2))
 	var middle_category = _grid_categories.get_children()[middle_idx]
 	var x = middle_category.get_global_position().x + (middle_category.get_size().x / 2) - (_context_menu.get_size().x / 2)	
-	_context_menu.set_deferred("rect_global_position", Vector2(x, _context_menu.get_global_position().y))
+	_context_menu.set_deferred("global_position", Vector2(x, _context_menu.get_global_position().y))
 		
-	if not _context_menu.get_button_equip().is_connected("pressed", self, "_on_context_menu_button_equip_pressed"):
-		_context_menu.get_button_equip().connect("pressed", self, "_on_context_menu_button_equip_pressed")
-		_context_menu.get_button_cancel().connect("pressed", self, "_on_context_menu_button_cancel_pressed")
+	if not _context_menu.get_button_equip().is_connected("pressed", _on_context_menu_button_equip_pressed):
+		_context_menu.get_button_equip().pressed.connect(_on_context_menu_button_equip_pressed)
+		_context_menu.get_button_cancel().pressed.connect(_on_context_menu_button_cancel_pressed)
 
 
 func _open_context_menu(ui_inventory_item : Node) -> void:

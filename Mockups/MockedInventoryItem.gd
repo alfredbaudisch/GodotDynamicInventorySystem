@@ -3,5 +3,5 @@ extends Resource
 
 enum TestItemTypes { WEAPON, ARMOR }
 
-export(TestItemTypes) var type 
-export(float) var price
+@export var type: TestItemTypes 
+@export var price: float
