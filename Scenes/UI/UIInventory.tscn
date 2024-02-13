@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dv01i2p2ram6s" path="res://Scenes/UI/Elements/UIInventoryCategory.tscn" id="5"]
 [ext_resource type="FontFile" path="res://Assets/Fonts/DynamicFontDataRobotoCondensedItalic.tres" id="6"]
 [ext_resource type="AudioStream" uid="uid://sstpiuw0ytpm" path="res://Assets/Sounds/switch_006.ogg" id="7"]
-[ext_resource type="PackedScene" path="res://Scenes/UI/Elements/UIInventoryItemContextMenu.tscn" id="8"]
+[ext_resource type="PackedScene" uid="uid://sogtrmbcsnar" path="res://Scenes/UI/Elements/UIInventoryItemContextMenu.tscn" id="8"]
 [ext_resource type="PackedScene" uid="uid://belgpipa3w2n4" path="res://Scenes/UI/Elements/UIItemInfo.tscn" id="9"]
 [ext_resource type="PackedScene" path="res://Scenes/UI/Elements/UICharacterItemSlots.tscn" id="10"]
 [ext_resource type="AudioStream" uid="uid://dnbcfuhkyqmhh" path="res://Assets/Sounds/switch_007.ogg" id="11"]
@@ -279,17 +279,18 @@ offset_right = 137.0
 offset_bottom = 274.0
 
 [node name="UIContextMenuContainer" type="Control" parent="."]
-visible = false
 anchors_preset = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="UIContextMenu" parent="UIContextMenuContainer" instance=ExtResource("8")]
-anchors_preset = 0
+layout_mode = 1
+anchors_preset = 4
 anchor_left = 0.0
 anchor_right = 0.0
 offset_left = 0.0
 offset_right = 240.0
+grow_vertical = 2
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="UIContextMenuContainer"]
 stream = ExtResource("3")
