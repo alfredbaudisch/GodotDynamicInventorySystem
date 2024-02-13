@@ -25,5 +25,6 @@ layout_mode = 2
 max_value = 1.0
 step = 0.05
 value = 0.6
+show_percentage = false
 
 [connection signal="draw" from="." to="." method="_on_UICharacterStats_draw"]

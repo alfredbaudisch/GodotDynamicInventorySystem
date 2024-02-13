@@ -13,7 +13,7 @@
 
 [sub_resource type="StyleBoxEmpty" id="3"]
 
-[sub_resource type="StyleBoxFlat" id="4"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6ed0a"]
 bg_color = Color(0, 0, 0, 0.670588)
 border_width_left = 1
 border_width_top = 1
@@ -21,7 +21,7 @@ border_width_right = 1
 border_width_bottom = 1
 border_color = Color(1, 1, 1, 0.443137)
 
-[sub_resource type="StyleBoxFlat" id="5"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_62ttc"]
 bg_color = Color(0.694118, 0.25098, 0.25098, 1)
 border_width_left = 2
 border_width_top = 2
@@ -38,8 +38,8 @@ Button/styles/pressed = ExtResource("5")
 HScrollBar/styles/grabber = SubResource("2")
 HScrollBar/styles/scroll = SubResource("3")
 Label/fonts/font = ExtResource("2")
-ProgressBar/styles/bg = SubResource("4")
-ProgressBar/styles/fg = SubResource("5")
+ProgressBar/styles/background = SubResource("StyleBoxFlat_6ed0a")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_62ttc")
 RichTextLabel/fonts/bold_font = ExtResource("7")
 RichTextLabel/fonts/italics_font = ExtResource("8")
 RichTextLabel/fonts/normal_font = ExtResource("2")

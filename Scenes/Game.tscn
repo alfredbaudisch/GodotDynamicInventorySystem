@@ -938,74 +938,7 @@ offset_bottom = 720.0
 grow_horizontal = 1
 grow_vertical = 1
 
-[node name="TextureBlur" parent="UI/UIInventoryScreen" index="0"]
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 1680.0
-offset_bottom = 1040.0
-
-[node name="VBoxContainer" parent="UI/UIInventoryScreen" index="1"]
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_right = 1280.0
-offset_bottom = 720.0
-
-[node name="ColorRectBackground" parent="UI/UIInventoryScreen/VBoxContainer/ControlHeader" index="0"]
-anchor_right = 0.0
-anchor_bottom = 0.0
-
-[node name="LabelTitle" parent="UI/UIInventoryScreen/VBoxContainer/ControlHeader" index="1"]
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 149.0
-offset_bottom = 48.0
-
-[node name="ColorRectSeparator" parent="UI/UIInventoryScreen/VBoxContainer/ControlHeader" index="2"]
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_bottom = 1.0
-
-[node name="HBoxGold" parent="UI/UIInventoryScreen/VBoxContainer/ControlHeader" index="3"]
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 150.0
-offset_bottom = 64.0
-
-[node name="UICharacterStats" parent="UI/UIInventoryScreen/VBoxContainer/ControlHeader" index="4"]
-offset_left = 0.0
-
-[node name="ColorRectBackground" parent="UI/UIInventoryScreen/VBoxContainer/ControlFooter" index="0"]
-anchor_right = 0.0
-anchor_bottom = 0.0
-
-[node name="ColorRectSeparator" parent="UI/UIInventoryScreen/VBoxContainer/ControlFooter" index="1"]
-anchor_right = 0.0
-offset_bottom = 1.0
-
-[node name="HBoxPrompts" parent="UI/UIInventoryScreen/VBoxContainer/ControlFooter" index="2"]
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 160.0
-offset_bottom = 40.0
-
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="UI"]
 volume_db = -10.0
 
 [connection signal="area_entered" from="Player/Area2D" to="Player" method="_on_Area2D_area_entered"]
-
-[editable path="UI/UIInventoryScreen"]

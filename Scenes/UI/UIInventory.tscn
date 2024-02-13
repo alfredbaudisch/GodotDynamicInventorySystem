@@ -14,7 +14,7 @@
 [ext_resource type="AudioStream" uid="uid://bxnbv2qriekby" path="res://Assets/Sounds/cloth-inventory.wav" id="12"]
 [ext_resource type="AudioStream" uid="uid://c7wd27ogjsoo7" path="res://Assets/Sounds/click-less-pitch.ogg" id="13"]
 [ext_resource type="AudioStream" uid="uid://bldxgnw1nixkv" path="res://Assets/Sounds/magnet_on_reduced.wav" id="14"]
-[ext_resource type="PackedScene" path="res://Scenes/UI/Elements/GridInventoryItems.tscn" id="15"]
+[ext_resource type="PackedScene" uid="uid://cv0qumjllea1k" path="res://Scenes/UI/Elements/GridInventoryItems.tscn" id="15"]
 
 [sub_resource type="FontFile" id="12"]
 fallbacks = Array[Font]([ExtResource("6")])
@@ -202,6 +202,8 @@ action_mode = 0
 shortcut = SubResource("8")
 shortcut_in_tooltip = false
 texture_normal = ExtResource("2")
+ignore_texture_size = true
+stretch_mode = 0
 flip_h = true
 
 [node name="ScrollContainerItemGrids" type="ScrollContainer" parent="HBoxMain/ControlItemsColumn/VBoxItemsColumn/HBoxInventoryItems"]
@@ -238,6 +240,8 @@ action_mode = 0
 shortcut = SubResource("10")
 shortcut_in_tooltip = false
 texture_normal = ExtResource("2")
+ignore_texture_size = true
+stretch_mode = 0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="HBoxMain/ControlItemsColumn/VBoxItemsColumn/HBoxInventoryItems"]
 root_node = NodePath("../../../../..")

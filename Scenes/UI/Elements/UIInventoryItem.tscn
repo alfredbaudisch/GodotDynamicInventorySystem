@@ -77,7 +77,7 @@ texture = ExtResource("1")
 expand_mode = 1
 
 [node name="TextureItemSprite" type="TextureRect" parent="UIFrame/TextureItemBackground"]
-texture_filter = 1
+texture_filter = 2
 layout_mode = 0
 anchor_left = 0.5
 anchor_top = 0.5
